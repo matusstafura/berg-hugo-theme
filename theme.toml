@@ -1,0 +1,12 @@
+name = "Berg"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "Hugo theme for your website"
+homepage = "http://example.com/"
+tags = ["blog", "personal", "portfolio", "responsive", "tailwindcss"]
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Matus Stafura"
+  homepage = "https://stafura.dev"
