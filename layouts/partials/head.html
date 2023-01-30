@@ -8,5 +8,10 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{ "css/styles.css" | absURL}}" />
+    {{ $css := resources.Get "./css/styles.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+    {{ $js := resources.Get "./js/scripts.js" }}
+    <script src="{{ $js.RelPermalink }}"></script>
+
 </head>
