@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Description }}</p>
+<h2>Latest Articles:</h2>
+<ul>
+    {{ range (.Paginator 10).Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
+{{ template "_internal/pagination.html" . }}
+{{ end }}
