@@ -1,6 +1,8 @@
-<footer>
-    <div class="flex justify-between item-center">
-        <div>&copy; 2023</div>
-        <div>privacy</div>
-    </div>
+<footer class="py-4 w-full text-gray-500 text-[0.9rem] dark:text-gray-200 md:justify-between lg:flex">
+    <div>© 2023 {{ .Site.Title }}</div>
+    <ul class="flex space-x-4">
+        {{ range .Site.Menus.footer }}
+        <li><a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
 </footer>

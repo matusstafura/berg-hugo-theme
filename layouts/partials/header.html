@@ -1,4 +1,30 @@
 <div class="flex justify-between items-center">
-    <logo>logo</logo>
-    <nav>nav</nav>
+
+    <div class="flex items-center w-full py-4 dark:bg-slate-900">
+        <div class="flex">
+            <a href="/" class="flex">
+                <div class="m-auto text-xl font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
+            </a>
+        </div>
+        <div class="hidden ml-auto lg:flex">
+            <nav>
+                <ul class="flex space-x-4 font-semibold text-slate-700 dark:text-slate-100">
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}" class="hover:text-blue-400">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+        <div class="ml-auto flex border-slate-900/10 dark:border-slate-50/[0.06] lg:hidden">
+            <button type="button"
+                    class="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300">
+                <span class="sr-only">Navigation</span>
+                <svg width="24" height="24">
+                    <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
 </div>
