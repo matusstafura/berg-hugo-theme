@@ -1,8 +1,8 @@
 <footer class="py-4 w-full text-gray-500 text-[0.9rem] dark:text-gray-200 md:justify-between lg:flex">
     <div>© 2023 {{ .Site.Title }}</div>
-    <ul class="flex space-x-4">
+    <div class="lg:flex lg:space-x-4">
         {{ range .Site.Menus.footer }}
-        <li><a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a></li>
+        <div><a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a></div>
         {{ end }}
-    </ul>
+    </div>
 </footer>
