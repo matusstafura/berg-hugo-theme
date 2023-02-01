@@ -1,31 +1,30 @@
 <div class="flex justify-between items-center w-full">
 
-<!--    <div class="flex items-center w-full py-4 dark:bg-slate-900">-->
-        <div class="flex">
-            <a href="/" class="flex">
-                <div class="m-auto text-xl font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
-            </a>
+    <div class="flex">
+        <a href="/" class="flex">
+            <div class="m-auto text-xl font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
+        </a>
+    </div>
+    <nav>
+        <div class="hidden ml-auto lg:flex">
+            <div class="flex space-x-8 font-semibold text-slate-700 dark:text-slate-100">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="hover:text-blue-400">{{ .Name }}</a>
+                {{ end }}
+            </div>
         </div>
-        <nav>
-            <div class="hidden ml-auto lg:flex">
-                <div class="flex space-x-8 font-semibold text-slate-700 dark:text-slate-100">
-                    {{ range .Site.Menus.main }}
-                    <a href="{{ .URL }}" class="hover:text-blue-400">{{ .Name }}</a>
-                    {{ end }}
-                </div>
-            </div>
 
-            <div id="burger" class="ml-auto flex border-slate-900/10 dark:border-slate-50/[0.06] lg:hidden">
-                <button type="button"
-                        class="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300">
-                    <span class="sr-only">Navigation</span>
-                    <svg width="24" height="24">
-                        <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2"
-                              stroke-linecap="round"></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
+        <div id="burger" class="ml-auto flex border-slate-900/10 dark:border-slate-50/[0.06] lg:hidden">
+            <button type="button"
+                    class="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300">
+                <span class="sr-only">Navigation</span>
+                <svg width="24" height="24">
+                    <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
     <div id="resp" class="p-4 hidden lg:hidden absolute inset-y-4 bg-white w-1/2 shadow">
         <div class="border-b pb-4 text-xl font-bold">{{ .Site.Title }}</div>
         <ul class="pt-4 text-slate-700 space-y-4 dark:text-slate-100">
@@ -34,6 +33,5 @@
             {{ end }}
         </ul>
     </div>
-<!--    </div>-->
 
 </div>

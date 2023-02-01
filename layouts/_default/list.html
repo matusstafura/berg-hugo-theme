@@ -4,7 +4,7 @@
 <h2>Latest Articles:</h2>
 <ul>
     {{ range (.Paginator 10).Pages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    <li>{{ .Date.Format "2006-01-02" }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>
 {{ template "_internal/pagination.html" . }}
