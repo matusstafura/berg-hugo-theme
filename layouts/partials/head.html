@@ -8,6 +8,13 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{- with .Site.Params.verification.google }}
+    <meta name="google-site-verification" content="{{ . }}" />
+    {{- end -}}
+    {{- with .Site.Params.verification.bing }}
+    <meta name="msvalidate.01" content="{{ . }}" />
+    {{- end -}}
+
     {{ $css := resources.Get "./css/styles.css" }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 

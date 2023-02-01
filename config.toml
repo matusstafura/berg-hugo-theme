@@ -1,0 +1,10 @@
+# Site settings
+[params]
+  # Enter number of posts to display per page.
+  # Should be an unsigned integer.
+  paginate = 10
+
+# Third party services
+[params.verification]
+  google = ""
+  bing = ""
