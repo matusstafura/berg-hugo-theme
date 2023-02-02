@@ -4,7 +4,16 @@
   # Should be an unsigned integer.
   paginate = 10
 
+  # A description of the site.
+  description = "A personal blog."
+
 # Third party services
 [params.verification]
   google = ""
-  bing = ""
+  bing = "XXX"
+
+[params.plugins]
+  # TAG MANAGER Google Tag Manager
+  # Enter the full ID (like "GTM-XXXXXX")
+  # or leave empty string to disable -> ""
+  tagmanager = ""

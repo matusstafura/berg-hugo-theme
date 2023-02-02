@@ -1,22 +1,16 @@
 <head>
+    {{ partial "head/first.html" . }}
     <title>{{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}</title>
     <meta name="title" content="{{- .Title }} - {{ .Site.Title -}}">
-    <meta name="description" content="{{- .Description -}}">
+    <meta name="description" content="{{- .Description | default .Site.Params.Description -}}">
 
     <!-- View Type -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{- with .Site.Params.verification.google }}
-    <meta name="google-site-verification" content="{{ . }}" />
-    {{- end -}}
-    {{- with .Site.Params.verification.bing }}
-    <meta name="msvalidate.01" content="{{ . }}" />
-    {{- end -}}
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{ $css := resources.Get "./css/styles.css" }}
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
-
-
+    {{ partial "head/seo.html" . }}
+    {{ partial "head/link.html" . }}
 </head>
