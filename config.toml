@@ -4,13 +4,19 @@
   # Should be an unsigned integer.
   paginate = 10
 
+  # Format of the date to display in the post list.
+  # Please DO NOT change the numbers in the date format.
+  # It must be 02 for day, Jan or 01 for month, 2006 for year
+  # Examples 02 Jan 2006, 01/02/2006, 02-01-2006
+  date_format = "2006-01-02"
+
   # A description of the site.
   description = "A personal blog."
 
 # Third party services
 [params.verification]
   google = ""
-  bing = "XXX"
+  bing = ""
 
 [params.plugins]
   # TAG MANAGER Google Tag Manager

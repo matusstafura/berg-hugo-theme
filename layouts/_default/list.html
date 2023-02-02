@@ -4,8 +4,9 @@
 <h2>Latest Articles:</h2>
 <ul>
     {{ $paginate := .Site.Params.Paginate }}
+    {{ $date_format := .Site.Params.Date_Format }}
     {{ range (.Paginator $paginate).Pages }}
-    <li>{{ .Date.Format "2006-01-02" }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    <li>{{ .Date.Format $date_format }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
 </ul>
 {{ template "_internal/pagination.html" . }}
