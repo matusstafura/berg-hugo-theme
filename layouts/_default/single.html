@@ -1,6 +1,9 @@
 {{ define "main" }}
 
 <h1>{{ .Title }}</h1>
+{{ if .Params.FeaturedImage }}
+<img src="{{ .Params.FeaturedImage }}" alt="{{ .Title }}">
+{{ end }}
 
 <p>{{ .Description }}</p>
 

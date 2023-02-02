@@ -1074,6 +1074,10 @@ video {
   margin-left: auto;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }
@@ -1176,6 +1180,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-\[0\.9rem\] {
