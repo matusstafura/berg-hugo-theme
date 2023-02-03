@@ -1,8 +1,9 @@
 <div class="flex justify-between items-center w-full">
 
     <div class="flex items-center space-x-4">
-        <img class="h-8"
-             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADkUlEQVR4nO2Vb0gTYRzHn15URPTnRVERBEER9KI3Eb3pRUEvelUvtpGmaZos+nOzoXPu5rw7pxaRbtOlZanpptJot5KyMqLAokil3J2+CYSQoqToH+buMp94rt3yzunMdfsT+8IXtt+9uM/3+3ueDYCUUkoppf9aFMPdJhn+BkhGEYM/9lIsD5EJlt8Fkk0Uwz0QA1AMdwckk6hBfmcIPhSC3wGSRSTLd4YJ4APJIIINbKUY7qc8AMlwk4Sf2wYSXRTDt09rXwzB8h0gkVU2GNhMstzEzAG4ibKBwBaQqKIYvmkm+D9HiW8GiSiC/b6BYjguYgCW460vxzeCRBPJcvWR4KeEqAeJpPIhuI70BwLhYI0PhqHh7pA0gD/Alb8YWw8SRQQTqEFgJ1u6Id7zRgKbV9MBM0kH+jeWb8EGEkEVfriGHBjnjjV0QrUOF0KIkCXPP0LNaYsw1/t65Vvg0ebizQ9MPW+b85yeCQSJnFFaHYI80dItzJDTTWchMTAmCVHy7ENs7oLdTd9Els+xxq7V2eeaRkRI0egYkf5xmFZ8RjI/1f4wBH+soRNaej9xRN/XVYrCO9zX99jdNES2uXy7pz5T6XCrHF48Rnpf/7T5QYMVlvZ/EQJkldfBQyXn4YmWe5cVDWBzeR+JAewu+rE412iNK9SY6VO4AJmETQAM9+z4lVu/L3dth/BdpcM/H8gnVirevnwLKh1uCQcYyehSm5++l9wPDYablW9/yhYyCwqWqnT46HwCIOfVXoOnb/RNnX3YbzAsU7x90Tl45cX5wgvON8N8zxPJTIUVFyrfvpuG1a1emK63cFEF0OHwcJlTFgB/p9HrlyjeflFVfVTgsxozYYq2b3N5YUYhqVwAHT6yD8MWRwnv2z1T+8bqS0rCQ+EXSYdrEQeEcIHdRd9HRp//SfuZBkrxACoMf63VahfaXHR66P1t3rSoz77J3qA4vFrcQj6ea3d7X4XKc3uHCY9nUXTtF5XFLECa3jKK3inhaKVPzbt9s+NKzODVQaN3SkukRx2uruXzaj/baI15gCyjNRwL+dftl9Q2xhxeHbSlplG+hW/OZs/aObePfMRUEbcA2cXlwgmQhHB7a+fcfqmzKW7w6qAJZ7MsAM1Xtd7cNKf2c/HKuAfIMVWGYfO2R2yfrLsad3h10OSFFvllnnS0+bbP2v5Rc/zbVweNWMJs4WHEP7aUUkopJaCkfgFLjL5BaCZqPwAAAABJRU5ErkJggg==">
+        {{ with .Site.Params.logo }}
+        <img class="h-8" src="{{ . }}" alt="Logo">
+        {{ end }}
         <div class="m-auto text-xl font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
     </div>
 

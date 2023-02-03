@@ -4,6 +4,10 @@ title = 'Hugo Theme - Berg'
 theme = 'berg'
 themesDir = '../..'
 
+[params]
+  logo = '/logo.png'
+  description = 'A simple, clean, and responsive Hugo theme.'
+
 [menu]
   [[menu.main]]
     name = "Home"

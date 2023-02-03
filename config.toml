@@ -1,5 +1,9 @@
 # Site settings
 [params]
+  # enter the path or leave empty string to disable -> ""
+  # Example: "/images/logo.png"
+  logo = ""
+
   # Enter number of posts to display per page.
   # Should be an unsigned integer.
   paginate = 10
@@ -11,7 +15,7 @@
   date_format = "2006-01-02"
 
   # A description of the site.
-  description = "A personal blog."
+  description = ""
 
 # Third party services
 [params.verification]
