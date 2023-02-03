@@ -1,11 +1,16 @@
 {{ define "main" }}
 
 <h1>{{ .Title }}</h1>
-{{ if .Params.FeaturedImage }}
-<img src="{{ .Params.FeaturedImage }}" alt="{{ .Title }}">
-{{ end }}
-
 <p>{{ .Description }}</p>
 
-{{ .Content }}
+{{ if .Params.FeaturedImage }}
+<div class="bg-white my-4">
+    <img src="{{ .Params.FeaturedImage }}" alt="{{ .Title }}" class="shadow p-4">
+</div>
+{{ end }}
+
+
+<div class="prose dark:prose-invert prose-slate max-w-none">
+    {{ .Content }}
+</div>
 {{ end }}
