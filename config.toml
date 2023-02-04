@@ -16,6 +16,14 @@
 
   # A description of the site.
   description = ""
+    
+  twitterHandle = "@matusstafura"
+
+[params.social]
+    
+  enabled = true
+  twitter = true
+  facebook = true
 
 # Third party services
 [params.verification]

@@ -1,3 +1,4 @@
+{{ if .Site.Params.social.enabled }}
 <section class="share">
     <h6>Share this post</h6>
     <a href="https://twitter.com/share\?text={{ .Title | safeHTML}}&nbsp;-&nbsp;{{ .Site.Title }}&amp;url={{ .Permalink }}"
@@ -9,3 +10,4 @@
         <span>Facebook</span>
     </a>
 </section>
+{{ end }}
