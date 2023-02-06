@@ -1,7 +1,10 @@
 {{ define "main" }}
 {{ partial "plugin/breadcrumbs" . }}
 
-<h1>{{ .Title }}</h1>
+<div class="flex justify-between items-center">
+    <h1 class="text-3xl font-bold">{{ .Title }}</h1>
+    {{ partial "plugin/share" . }}
+</div>
 <p>{{ .Description }}</p>
 
 {{ if .Params.FeaturedImage }}
@@ -14,6 +17,5 @@
     {{ .Content }}
 </div>
 
-{{ partial "plugin/share" . }}
 
 {{ end }}

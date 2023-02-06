@@ -1,6 +1,6 @@
 <div class="flex flex-col grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 py-4">
     {{ range (where .Site.RegularPages "Type" "posts" ) }}
-    <div class="border rounded-xl bg-white">
+    <div class="border rounded-xl bg-white dark:bg-slate-700">
         <a href="{{ .Permalink }}"><img src="{{ .Params.featuredImage }}" class="object-fill rounded-t-xl" alt=""/></a>
         <div class="p-4 space-y-4">
             <h3 class="py-3 text-2xl hover:text-blue-500 dark:text-gray-200">
