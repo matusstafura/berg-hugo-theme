@@ -2,20 +2,12 @@
 {{ partial "plugin/breadcrumbs" . }}
 
 <div class="flex justify-between items-center">
-    <h1 class="text-3xl font-bold">{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
     {{ partial "plugin/share" . }}
 </div>
-<p>{{ .Description }}</p>
 
-{{ if .Params.FeaturedImage }}
-<div class="bg-white my-4">
-    <img src="{{ .Params.FeaturedImage }}" alt="{{ .Title }}" class="shadow p-4">
-</div>
-{{ end }}
-
-<div class="prose dark:prose-invert prose-slate max-w-none">
+<div class="prose dark:prose-invert prose-slate max-w-none" id="blog">
     {{ .Content }}
 </div>
-
 
 {{ end }}
