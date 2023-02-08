@@ -10,12 +10,8 @@ body {
 @font-face {
     font-family: "Roboto";
     font-style: normal;
-    font-weight: 300;
+    font-smooth: always;
     src: url("/fonts/Roboto-Regular.ttf") format("truetype");
-}
-
-p {
-    @apply text-base text-gray-900 dark:text-gray-100;
 }
 
 #blog img {
@@ -41,27 +37,9 @@ a.page-link {
     @apply text-gray-400 hover:bg-transparent hover:text-gray-400 cursor-not-allowed;
 }
 
-/* Headings */
-h1 {
-    @apply text-3xl font-semibold text-gray-900 py-2 dark:text-slate-100;
+
+p {
+    @apply text-[1.05rem] leading-relaxed text-slate-700 antialiased dark:text-gray-100;
 }
 
-h2 {
-    @apply text-2xl font-semibold text-gray-900 py-2 dark:text-slate-50;
-}
-
-h3 {
-    @apply text-xl font-semibold text-gray-900 py-2 dark:text-slate-50;
-}
-
-h4 {
-    @apply text-lg font-semibold text-gray-900 py-2 dark:text-slate-50;
-}
-
-h5 {
-    @apply text-base font-semibold text-gray-900 py-2 dark:text-slate-50;
-}
-
-h6 {
-    @apply text-sm font-semibold text-gray-900 py-2 dark:text-slate-50;
-}
+ 

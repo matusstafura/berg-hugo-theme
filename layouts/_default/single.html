@@ -1,12 +1,16 @@
 {{ define "main" }}
 {{ partial "plugin/breadcrumbs" . }}
 
-<div class="flex justify-between items-center">
-    <h1>{{ .Title }}</h1>
-    {{ partial "plugin/share" . }}
+<div class="flex justify-between items-middle">
+    <div>
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div>
+        {{ partial "plugin/share" . }}
+    </div>
 </div>
 
-<div class="prose dark:prose-invert prose-slate max-w-none" id="blog">
+<div>
     {{ .Content }}
 </div>
 
