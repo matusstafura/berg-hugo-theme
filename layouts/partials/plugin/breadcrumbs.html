@@ -1,3 +1,4 @@
+{{ if .Site.Params.breadcrumbs }}
 <div class="breadcrumbs">
 
     {{- $url := replace .Parent.Permalink (printf "%s" site.BaseURL) "" }}
@@ -16,3 +17,4 @@
 
     {{- end -}}
 </div>
+{{ end }}

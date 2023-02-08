@@ -1,5 +1,6 @@
 # Site settings
 [params]
+
   # enter the path or leave empty string to disable -> ""
   # Example: "/images/logo.png"
   logo = ""
@@ -14,10 +15,18 @@
   # Examples 02 Jan 2006, 01/02/2006, 02-01-2006
   date_format = "2006-01-02"
 
+  # enable or disable the breadcrumbs
+  # true or false
+  breadcrumbs = false
+
   # A description of the site.
   description = ""
     
   twitterHandle = "@matusstafura"
+
+[markup]
+  [markup.highlight]
+    style = 'hrdark'
 
 [params.social]
     
@@ -27,6 +36,7 @@
 
 # Third party services
 [params.verification]
+
   google = ""
   bing = ""
 
