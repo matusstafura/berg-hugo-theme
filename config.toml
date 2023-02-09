@@ -14,7 +14,7 @@
   # default is 3
   latestPostsCount = 6
 
-  # Format of the date to display in the post list.
+  # Global date format
   # Please DO NOT change the numbers in the date format.
   # It must be 02 for day, Jan or 01 for month, 2006 for year
   # Examples 02 Jan 2006, 01/02/2006, 02-01-2006
