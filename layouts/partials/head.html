@@ -1,6 +1,6 @@
 <head>
     {{ partial "head/first.html" . }}
-    <title>{{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}</title>
+    <title>{{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }} - {{ .Site.BaseURL}}</title>
     <meta name="title" content="{{- .Title }} - {{ .Site.Title -}}">
     <meta name="description" content="{{- .Description | default .Site.Params.Description -}}">
 

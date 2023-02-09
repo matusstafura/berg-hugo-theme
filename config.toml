@@ -27,12 +27,14 @@
   # A description of the site.
   description = ""
 
+  createdBy = true
+
 [params.posts]
 
   # Show profile in posts
   # make sure to set the author name, email, bio
   # and avatar in the author section
-  showProfile = true
+  showProfile = false
 
   # Show categories in posts
   showCategories = true

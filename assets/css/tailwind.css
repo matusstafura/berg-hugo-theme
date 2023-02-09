@@ -14,7 +14,7 @@ body {
     src: url("/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
-#blog img {
+#blogpost img {
     @apply shadow-lg p-4 border;
 }
 

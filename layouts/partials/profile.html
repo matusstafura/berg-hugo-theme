@@ -2,7 +2,9 @@
 {{ with .Site.Params.Author }}
 <div class="flex space-x-4 items-center border-t mt-8">
     <div class="">
-    <img src="{{ .avatar }}" alt="avatar" class="rounded-full shadow w-48">
+    {{ if .avatar }}
+        <img src="{{ .avatar }}" alt="avatar" class="rounded-full shadow w-48">
+    {{ end }}
     </div>
     <div>
         <div class="text-bold">{{ .name }}</div>

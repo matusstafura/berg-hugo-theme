@@ -22,7 +22,9 @@
     </div>
 </div>
 
-{{ .Content }}
+<div id="blogpost">
+    {{ .Content }}
+</div>
 
 {{ if .Site.Params.Posts.showTags }}
 {{ range .Params.Tags }}
