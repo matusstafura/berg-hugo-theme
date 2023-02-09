@@ -1,12 +1,23 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Hugo Theme - Berg'
+title = "Jane's Blog"
 theme = 'berg'
 themesDir = '../..'
 
 [params]
-  logo = '/logo.png'
+  logo = '/images/logo.svg'
   description = 'A simple, clean, and responsive Hugo theme.'
+  date_format = 'January 2, 2006'
+  breadcrumbs = false
+
+[params.posts]
+  showProfile = true
+
+[params.author]
+  name = "Jane Doe"
+  bio = "Jane Doe is a creative and innovative author-blogger who specializes in design and programming. With a background in graphic design and computer science, Jane has a unique perspective on the intersection of these two fields."
+  avatar = "/images/avatar.png"
+  twitterHandle = "@janedoe"
 
 [menu]
   [[menu.main]]
@@ -25,7 +36,3 @@ themesDir = '../..'
     name = "Privacy Policy"
     url = "/privacy-policy/"
     weight = 1
-  [[menu.footer]]
-    name = "Cookie Policy"
-    url = "/cookie-policy/"
-    weight = 2
