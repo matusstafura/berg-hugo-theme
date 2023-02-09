@@ -1,0 +1,14 @@
+{{ if and (.Site.Params.Posts.showProfile) (eq .Type "posts") }} 
+{{ with .Site.Params.Author }}
+<div class="flex space-x-4 items-center border-t mt-8">
+    <div class="">
+    <img src="{{ .avatar }}" alt="avatar" class="rounded-full shadow w-48">
+    </div>
+    <div>
+        <div class="text-bold">{{ .name }}</div>
+        <div class="text-sky-500">{{ .twitterHandle }}</div>
+        <div class="text-[0.9rem] text-gray-500">{{ .bio }}</div>
+    </div>
+</div>
+{{ end }}
+{{ end }}

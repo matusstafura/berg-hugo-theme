@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{ partial "plugin/breadcrumbs" . }}
 <h1>{{ .Title }}</h1>
-<p>{{ .Description }}</p>
 <div>
     {{ .Content }}
     {{ partial "post-list.html" . }}

@@ -1,12 +1,13 @@
 <div class="grid grid-cols-1 gap-x-8 md:grid-cols-2 xl:grid-cols-3 py-4 gap-y-12 not-prose">
-    {{ range (where .Site.RegularPages "Type" "posts" ) }}
+    {{ $count := .Site.Params.latestPostsCount | default 3 }}
+    {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
     <div class="rounded-xl space-y-4">
         <a href="{{ .Permalink }}"><img src="{{ .Params.featuredImage }}" class="object-fill rounded-xl" alt=""/></a>
         <div>
             <div class="flex items-center gap-x-1">
             {{ range .Params.Categories }}
             <span class="bg-blue-200 p-2 text-xs text-blue-500 hover:bg-blue-300 rounded-full capitalize">
-                <a href="/tags/{{.}}" class="">{{ . }}</a>
+                <a href="/categories/{{.}}" class="">{{ . }}</a>
             </span>
             {{ end }}
                 <p>

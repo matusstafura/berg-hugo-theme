@@ -9,6 +9,11 @@
   # Should be an unsigned integer.
   paginate = 10
 
+  # Enter how many posts to display in shortcode latest-posts
+  # Should be an unsigned integer.
+  # default is 3
+  latestPostsCount = 6
+
   # Format of the date to display in the post list.
   # Please DO NOT change the numbers in the date format.
   # It must be 02 for day, Jan or 01 for month, 2006 for year
@@ -21,8 +26,35 @@
 
   # A description of the site.
   description = ""
-    
-  twitterHandle = "@matusstafura"
+
+[params.posts]
+
+  # Show profile in posts
+  # make sure to set the author name, email, bio
+  # and avatar in the author section
+  showProfile = true
+
+  # Show categories in posts
+  showCategories = true
+
+  # Show tags in posts
+  showTags = true
+
+  # Show share post in posts
+  # [params.social]
+  showShare = true
+
+[params.author]
+  # Enter your name
+  name = ""
+  # Enter your email
+  email = ""
+  # Enter your bio
+  bio = ""
+  # Enter your profile picture
+  avatar = ""
+  # Example: "/images/profile.jpg"
+  twitterHandle = ""
 
 [markup]
   [markup.highlight]
@@ -30,9 +62,12 @@
 
 [params.social]
     
-  enabled = true
+  # What social links to show in the posts
   twitter = true
+  linkedin = true
+  reddit = true
   facebook = true
+  telegram = true
 
 # Third party services
 [params.verification]

@@ -1,17 +1,34 @@
 {{ define "main" }}
 {{ partial "plugin/breadcrumbs" . }}
 
-<div class="flex justify-between items-middle">
-    <div>
-        <h1>{{ .Title }}</h1>
+<div class="text-center">
+    <h1>{{ .Title }}</h1>
+</div>
+
+<div class="flex justify-between items-center">
+    <div class="space-x-2">
+        {{ if .Site.Params.Posts.showCategories }}
+        {{ range .Params.Categories }}
+        <span class="bg-blue-200 p-2 text-xs hover:bg-blue-300 rounded-full capitalize">
+            <a href="/categories/{{.}}" class="no-underline text-blue-500">{{ . }}</a>
+        </span>
+        {{ end }}
+        {{ end }}
     </div>
     <div>
+        {{ if .Site.Params.Posts.showShare }}
         {{ partial "plugin/share" . }}
+        {{ end }}
     </div>
 </div>
 
-<div>
-    {{ .Content }}
-</div>
+{{ .Content }}
 
+{{ if .Site.Params.Posts.showTags }}
+{{ range .Params.Tags }}
+    <a href="/tags/{{.}}" class="bg-gray-200 p-2 space-x-3 py-1 text-xs text-gray-700 no-underline">#{{ . }}</a>
+{{ end }}
+{{ end }}
+
+{{ partial "profile" . }}
 {{ end }}
