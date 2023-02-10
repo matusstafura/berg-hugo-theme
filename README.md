@@ -1,6 +1,25 @@
-# HUGO theme BERG
+# BERG | HUGO theme 
 
-### Installation
+Berg theme is a clean and modern responsive blog theme for Hugo.
+
+## Contents
+
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Development](#development)
+- [License](#license)
+
+## Features
+
+- Responsive
+- Dark mode
+- Pagination
+- Google Tag Manager
+- Breadcrumbs
+- Social sharing
+- Meta verification
+
+## Quick Start
 
 ```shell
 hugo new site quickstart
