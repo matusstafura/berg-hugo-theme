@@ -3,7 +3,7 @@
     {{ $date_format := .Site.Params.Date_Format }}
     {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
     <div class="rounded-xl space-y-4">
-        <a href="{{ .Permalink }}"><img src="{{ .Params.featuredImage }}" class="object-fill rounded-xl" alt=""/></a>
+        <a href="{{ .Permalink }}"><img src="{{ .Params.featuredImage }}" class="object-fill rounded-xl shadow" alt=""/></a>
         <div class="space-y-3">
             <div class="space-x-2">
                 {{ range .Params.Categories }}
@@ -12,7 +12,7 @@
                 </span>
             {{ end }}
             </div>
-            <div class="flex">
+            <div class="flex space-x-1 items-center">
                 <p>
                     <svg class="h-4 fill-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                          viewBox="0 0 24 24">

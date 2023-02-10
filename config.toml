@@ -27,9 +27,13 @@
   # A description of the site.
   description = ""
 
+  # Backlink to the original theme
   createdBy = true
 
 [params.posts]
+
+  # Show prev/next post links
+  showPrevNext = true
 
   # Show profile in posts
   # make sure to set the author name, email, bio

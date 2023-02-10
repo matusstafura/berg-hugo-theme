@@ -1,13 +1,15 @@
-<div class="flex justify-between">
-    <div class="next-post">
-        {{ if .NextPage }}
-        <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">« {{ .NextPage.Title | truncate 50 "..." }}</a>
+{{ if and (.Site.Params.Posts.showPrevNext) (eq .Type "posts") }}
+<div class="flex justify-between pb-4">
+    <div>
+        {{ if .NextInSection  }}
+        <a href="{{ .NextPage.Permalink }}">« {{ .NextPage.Title | truncate 50 "..." }}</a>
         {{ end }}
     </div>
 
-    <div class="previous-post">
-        {{ if .PrevPage }}
-        <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">{{ .PrevPage.Title | truncate 50 "..."}} »</a>
+    <div>
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevPage.Permalink }}">{{ .PrevPage.Title | truncate 50 "..."}} »</a>
         {{ end }}
     </div>
 </div>
+{{ end }}

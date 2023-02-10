@@ -18,14 +18,23 @@ body {
     @apply shadow-lg p-4 border;
 }
 
-/* Pagination */
+/* Pagination Start */
 .pagination {
     @apply flex justify-center list-none space-x-4 py-4;
 }
 
-.page-item {
-    @apply mx-0.5 my-1 cursor-pointer rounded hover:bg-gray-800 hover:text-white dark:hover:bg-gray-500 dark:hover:text-white;
+.pagination a {
+    @apply no-underline;
 }
+
+.page-item {
+    @apply cursor-pointer rounded p-1 hover:bg-gray-800 dark:hover:bg-gray-700;
+}
+
+.page-item a {
+    @apply hover:text-gray-100;
+}
+
 a.page-link {
     @apply px-3 py-1 block;
 }
@@ -33,10 +42,15 @@ a.page-link {
 .page-item.active {
     @apply bg-gray-800 text-white dark:bg-gray-300 dark:text-gray-900;
 }
-.page-item.disabled {
-    @apply text-gray-400 hover:bg-transparent hover:text-gray-400 cursor-not-allowed;
+
+.page-item.active a {
+    @apply text-white;
 }
 
+.page-item.disabled {
+    @apply cursor-not-allowed;
+}
+/* Pagination End */
 
 p {
     @apply text-[1.05rem] leading-relaxed text-slate-700 antialiased dark:text-gray-100;
