@@ -24,7 +24,7 @@ Here's why time is so important:
 5. **Time is a precious commodity**: Because time is finite and irreplaceable, it has a value that cannot be measured in monetary terms. This is why it's essential to use our time wisely and not waste it on things that don't matter.
 
 ![](/images/blog/time.jpg)
-[Photo by Agê Barros](https://unsplash.com/@agebarros)
+[Photo by Mailchimp](https://unsplash.com/@agebarros)
 
 In conclusion, time is a precious and finite resource that is essential to making the most of our lives. By valuing our time and using it wisely, we can achieve our goals, create meaningful memories, and live a life that is rich and fulfilling.
 
