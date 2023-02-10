@@ -5,6 +5,8 @@
     <h1>{{ .Title }}</h1>
 </div>
 
+{{ partial "plugin/prevnext" . }}
+
 <div class="flex justify-between items-center">
     <div class="space-x-2">
         {{ if .Site.Params.Posts.showCategories }}
