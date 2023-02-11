@@ -1,23 +1,27 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = "Jane's Blog"
+title = "Berg Docs"
 theme = 'berg'
 themesDir = '../..'
 
 [params]
   logo = '/images/logo.svg'
-  description = 'A simple, clean, and responsive Hugo theme.'
+  description = 'A documentation for a simple, clean, and responsive Hugo theme.'
   date_format = 'January 2, 2006'
   breadcrumbs = false
 
+[markup]
+  [markup.highlight]
+    style = 'github-dark'
+
 [params.posts]
-  showProfile = true
+  showProfile = false
 
 [params.author]
-  name = "Jane Doe"
-  bio = "Jane Doe is a creative and innovative author-blogger who specializes in design and programming. With a background in graphic design and computer science, Jane has a unique perspective on the intersection of these two fields."
+  name = "Matus Stafura"
+  bio = "I'm a web developer and a blogger. Passionate about web development, open source, and technology."
   avatar = "/images/avatar.png"
-  twitterHandle = "@janedoe"
+  twitterHandle = "@matusstafura"
 
 [menu]
   [[menu.main]]
@@ -25,13 +29,9 @@ themesDir = '../..'
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Blog"
-    url = "/posts/"
-    weight = 2
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+    name = "Demo"
+    url = "https://berg.stafura.dev/"
+    weight = 4
   [[menu.footer]]
     name = "Privacy Policy"
     url = "/privacy-policy/"

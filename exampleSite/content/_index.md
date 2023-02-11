@@ -1,13 +1,26 @@
 ---
-title: "Homepage"
-description: "This is my blog"
+title: "Berg Hugo Theme"
+description: "Documentation for Berg - Hugo Theme"
 ---
 
-## Hello there!
+## Berg Hugo Theme
 
-Welcome to the world of Jane Doe, a design and programming enthusiast who shares her knowledge and expertise through her writing. 
+### Quick Start
 
-So if you're ready to dive into the world of design and programming, look no further. Explore Jane's blog today, and see for yourself why she's the go-to source for all things design and programming.
+```shell
+hugo new site quickstart
+cd quickstart
+git init
+git submodule add https://github.com/matusstafura/berg-hugo-theme themes/berg
+echo "theme = 'berg'" >> config.toml
+hugo server
+```
 
-{{< latest-posts >}}
+## Development
+
+### Tailwind CSS 
+
+```shell
+npm run dev
+```
 
