@@ -11,7 +11,6 @@ Berg theme is a clean and modern responsive blog theme for Hugo.
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Documentation](#documentation)
-- [Development](#development)
 - [License](#license)
 
 ## Features
@@ -37,11 +36,13 @@ hugo server
 
 ## Documentation
 
-### deploy locally
+Read the documentation by deploying it locally
 
 ```shell
 cd exampleSite && hugo server
 ```
+
+or read the docs online [https://berg.stafura.dev/docs](https://berg.stafura.dev/docs)
 
 ## License
 
