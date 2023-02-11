@@ -10,9 +10,6 @@
         </div>
         {{- partial "footer.html" . -}}
     </div>
-    {{ $js := resources.Get "./js/scripts.js" }}
-    <script src="{{ $js.RelPermalink }}"></script>
-    {{ $custom := resources.Get "./js/_custom.js" }}
-    <script src="{{ $custom.RelPermalink }}"></script>
+    {{ partial "scripts.html" . }}
     </body>
 </html>

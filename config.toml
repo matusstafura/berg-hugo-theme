@@ -30,6 +30,11 @@
   # Backlink to the original theme
   createdBy = true
 
+  # custom JS files
+  # place in static folder
+  # Example: ['/js/custom.js']
+  custom_js = []
+
 [params.posts]
 
   # Show prev/next post links

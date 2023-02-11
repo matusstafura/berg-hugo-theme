@@ -9,6 +9,7 @@ themesDir = '../..'
   description = 'A documentation for a simple, clean, and responsive Hugo theme.'
   date_format = 'January 2, 2006'
   breadcrumbs = false
+  custom_js = ['js/_custom.js']
 
 [markup]
   [markup.highlight]
