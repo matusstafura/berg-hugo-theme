@@ -11,9 +11,7 @@ See the _[demo](https://berg.stafura.dev/)_.
 ## Contents
 
 - [Features](#features)
-- [Quick Start](#quick-start)
 - [Documentation](#documentation)
-- [Development](#development)
 - [License](#license)
 
 ## Features
@@ -25,25 +23,6 @@ See the _[demo](https://berg.stafura.dev/)_.
 - Breadcrumbs
 - Social sharing
 - Meta verification
-
-## Quick Start
-
-```shell
-hugo new site quickstart
-cd quickstart
-git init
-git submodule add https://github.com/matusstafura/berg-hugo-theme themes/berg
-echo "theme = 'berg'" >> config.toml
-hugo server
-```
-
-## Development
-
-### Tailwind CSS 
-
-```shell
-npm run dev
-```
 
 ## Documentation
 
@@ -57,5 +36,5 @@ or read the docs online [https://berg.stafura.dev/docs](https://berg.stafura.dev
 
 ## License
 
-This theme is released under the MIT license. For more information read the [License](LICENSE).
+This theme is released under the MIT license. For more information read the [License](https://github.com/matusstafura/berg-hugo-theme/blob/main/LICENSE).
 

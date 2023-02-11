@@ -30,6 +30,10 @@ themesDir = '../..'
     url = "/"
     weight = 1
   [[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 2
+  [[menu.main]]
     name = "Demo"
     url = "https://berg.stafura.dev/"
     weight = 4
