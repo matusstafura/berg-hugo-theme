@@ -31,11 +31,17 @@
             </button>
         </div>
     </nav>
-    <div id="resp" class="p-4 hidden lg:hidden absolute inset-y-4 bg-white w-1/2 shadow">
-        <div class="border-b pb-4 text-xl font-bold">{{ .Site.Title }}</div>
+
+    <div id="resp" class="p-4 hidden lg:hidden absolute top-4 left-4 rounded bg-white dark:bg-slate-400 w-1/2">
+        <div class="flex justify-between items-middle border-b">
+            <div class="pb-4 text-xl font-bold dark:text-slate-100">{{ .Site.Title }}</div>
+            <div id="close-button" class="cursor-pointer fill-black dark:fill-white">
+                <svg width="24px"  viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path></g></svg>
+            </div>
+        </div>
         <ul class="pt-4 text-slate-700 space-y-4 dark:text-slate-100">
             {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}" class="hover:text-blue-400">{{ .Name }}</a></li>
+            <li><a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </div>
