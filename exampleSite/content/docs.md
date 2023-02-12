@@ -62,31 +62,33 @@ you can visit `/posts/my-first-post` to see the posts.
 
 ## Menu
 
-To add menu, edit the config.toml file.
+To create menu, create a file `navigation.toml` in `data` folder:
+```
+/data/navigation.toml
+```
 
 You can add:
-- main (navbar menu)
+- header (navbar menu)
 - footer (footer menu)
 
 Example:
 ```toml
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 2
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 4
-  [[menu.footer]]
-    name = "Privacy Policy"
-    url = "/privacy-policy/"
-    weight = 1
+[[header]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[header]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+[[header]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 3
+[[footer]]
+  name = "Privacy Policy"
+  url = "/privacy-policy/"
+  weight = 1
 ```
 
 ## Settings

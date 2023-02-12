@@ -24,20 +24,3 @@ themesDir = '../..'
   avatar = "/images/avatar.png"
   twitterHandle = "@matusstafura"
 
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Docs"
-    url = "/docs/"
-    weight = 2
-  [[menu.main]]
-    name = "Demo"
-    url = "https://berg.stafura.dev/"
-    weight = 4
-  [[menu.footer]]
-    name = "Privacy Policy"
-    url = "/privacy-policy/"
-    weight = 1

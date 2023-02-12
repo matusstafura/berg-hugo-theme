@@ -14,8 +14,8 @@
     <nav>
         <div class="hidden ml-auto lg:flex">
             <div class="flex space-x-8 font-semibold text-slate-700 dark:text-slate-100">
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL }}" class="hover:text-blue-400">{{ .Name }}</a>
+                {{ range .Site.Data.navigation.header }}
+                <a href="{{ .url }}" class="hover:text-blue-400">{{ .name }}</a>
                 {{ end }}
             </div>
         </div>
@@ -40,8 +40,8 @@
             </div>
         </div>
         <ul class="pt-4 text-slate-700 space-y-4 dark:text-slate-100">
-            {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a></li>
+            {{ range .Site.Data.navigation.header }}
+            <li><a href="{{ .url }}" class="hover:underline">{{ .name }}</a></li>
             {{ end }}
         </ul>
     </div>

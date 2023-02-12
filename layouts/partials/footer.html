@@ -6,8 +6,8 @@
         {{ end }}
     </div>
     <div class="lg:flex lg:space-x-4">
-        {{ range .Site.Menus.footer }}
-        <div><a href="{{ .URL }}" class="hover:underline">{{ .Name }}</a></div>
+        {{ range .Site.Data.navigation.footer }}
+        <div><a href="{{ .url }}" class="hover:underline">{{ .name }}</a></div>
         {{ end }}
     </div>
 </footer>
