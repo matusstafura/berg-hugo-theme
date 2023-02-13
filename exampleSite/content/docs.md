@@ -11,6 +11,8 @@ draft: false
 - [First Post](#first-post)
 - [Menu](#menu)
 - [Settings](#settings)
+- [Shortcodes](#shortcodes)
+- [Deployment](#deployment)
 - [Development](#development)
 
 ## Install Hugo
@@ -194,6 +196,33 @@ To change settings, edit file config.toml.
   tagmanager = ""
 
 ```
+
+## Shortcodes
+
+Shortcodes are simple snippets inside your content files calling built-in or custom templates.
+Just add the code to your markdown file.
+
+#### Latest posts
+
+```md
+{{</* latest-post-vertical */>}}
+```
+
+## Deployment
+
+### Digital Ocean 
+
+If you have a repo of your hugo site, you can have it hosted on DigitalOcean for **FREE**.
+DigitalOcean will automatically recognize your repo as Hugo.
+
+1. Create an account on [Digital Ocean](https://m.do.co/c/74a3950fb600) or sign-in.
+2. Click on link `Apps` in the sidebar and click `Create App` on the right.
+![](/images/deploy/do1.jpeg)
+3. Choose Service Provider.
+![](/images/deploy/do2.jpeg)
+4. In the review section, click Create Resources.
+![](/images/deploy/do3.jpeg)
+5. Within few minutes your web will be deployed.
 
 ## Development
 
