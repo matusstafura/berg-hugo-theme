@@ -2,8 +2,11 @@
 
 All the changes made to Berg theme for Hugo.
 
-## v0.1.0 - 2023-01-09
+## v0.1.1 - 2023-02-13
 
-### Action
+- set default pagination
+- remove redundant `latest post` header from post-list
 
-- Description of the change
+## v0.1.0 - 2023-02-12
+
+- init release
