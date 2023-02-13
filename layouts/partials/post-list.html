@@ -1,6 +1,6 @@
 <h2>Latest Posts:</h2>
 <ul>
-    {{ $paginate := .Site.Params.Paginate }}
+    {{ $paginate := .Site.Params.Paginate | default 10 }}
     {{ $date_format := .Site.Params.Date_Format }}
     {{ range (.Paginator $paginate).Pages }}
     <li>{{ .Date.Format $date_format }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
