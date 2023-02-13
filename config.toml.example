@@ -1,3 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = "Berg Docs"
+theme = 'berg'
+
 # Site settings
 [params]
 
@@ -7,6 +12,7 @@
 
   # Enter number of posts to display per page.
   # Should be an unsigned integer.
+  # default is 10
   paginate = 10
 
   # Enter how many posts to display in shortcode latest-posts
