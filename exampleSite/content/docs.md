@@ -101,14 +101,19 @@ To change settings, edit file config.toml.
 
 [params]
 
-  # Upload your logo to `static` folder
-  # enter the path or (excluding `static`)
-  # leave empty string to disable -> ""
+  # Upload your logo to the `static` folder
+  # Set the path, excluding `static`, or
+  # leave the empty string to disable -> ""
   # Example: "/images/logo.png"
   logo = ""
 
+  # Set the path for favicon
+  # Example: "/images/favicon.ico"
+  favicon = ""
+
   # Enter number of posts to display per page.
   # Should be an unsigned(bigger than 0) integer.
+  # Default is 10
   paginate = 10
 
   # Enter how many posts to display in 

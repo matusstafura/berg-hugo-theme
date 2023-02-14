@@ -11,6 +11,9 @@
 
     <link rel="canonical" href="{{ .Permalink }}" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" type="image/x-icon">
+
     {{ partial "head/seo.html" . }}
     {{ partial "head/twitter.html" . }}
     {{ partial "head/link.html" . }}
