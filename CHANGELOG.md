@@ -1,6 +1,12 @@
 # Changelog
 
 All the changes made to Berg theme for Hugo.
+ 
+## v0.1.2 - 2023-02-14
+
+- update: tailwindcss
+- 4ec02c4 chore: 404 center
+- 3d757f2 feat: favicon
 
 ## v0.1.1 - 2023-02-13
 
