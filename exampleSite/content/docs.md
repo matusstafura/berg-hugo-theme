@@ -153,6 +153,15 @@ To change settings, edit file config.toml.
   # and avatar in the author section
   showProfile = false
 
+  # Show Author Name in posts
+  # make sure to set the author name in the post
+  # otherwise it uses [params.author] if not set
+  showAuthor = false
+  
+  # Show Date in posts
+  # make sure to set the date in the post
+  showDate = false
+
   # Show categories in posts
   showCategories = true
 
