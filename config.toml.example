@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = "Berg Docs"
 theme = 'berg'
 
+# Provide Google Analytics 4 (GA4)
+# Example "G-XXXXXXXXXXXX"
+# leave empty or omit to disable
+googleAnalytics = ""
+
 # Site settings
 [params]
 

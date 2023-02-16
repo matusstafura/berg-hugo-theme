@@ -99,6 +99,11 @@ To change settings, edit file config.toml.
 
 ```toml
 
+# Provide Google Analytics 4 (GA4)
+# Example: "G-XXXXXXXXXXXX"
+# leave empty or omit to disable
+googleAnalytics = ""
+
 [params]
 
   # Upload your logo to the `static` folder
