@@ -185,9 +185,12 @@ googleAnalytics = ""
   # Enter your bio
   bio = ""
   # Enter your profile picture
-  avatar = ""
   # Example: "/images/profile.jpg"
-  twitterHandle = ""
+  avatar = ""
+
+[social]
+  # enter your twitter handle without @
+  twitter = "johndoe"
 
 [markup]
   [markup.highlight]

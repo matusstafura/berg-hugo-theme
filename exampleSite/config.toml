@@ -19,9 +19,5 @@ themesDir = '../..'
 [params.posts]
   showProfile = false
 
-[params.author]
-  name = "Matus Stafura"
-  bio = "I'm a web developer and a blogger. Passionate about web development, open source, and technology."
-  avatar = "/images/avatar.png"
-  twitterHandle = "@matusstafura"
+
 

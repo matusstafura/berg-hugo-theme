@@ -1,15 +1,18 @@
 {{ if and (.Site.Params.Posts.showProfile) (eq .Type "posts") }} 
-{{ with .Site.Params.Author }}
+{{ if .Site.Params.Author }}
 <div class="flex space-x-4 items-center border-t mt-8">
+    {{ if .Site.Params.Author.avatar }}
     <div class="">
-    {{ if .avatar }}
-        <img src="{{ .avatar }}" alt="avatar" class="rounded-full shadow w-48">
-    {{ end }}
+        <img src="{{ .Site.Params.Author.avatar }}" alt="avatar" class="rounded-full shadow w-48">
     </div>
+    {{ end }}
     <div>
-        <div class="text-bold">{{ .name }}</div>
-        <div class="text-sky-500">{{ .twitterHandle }}</div>
-        <div class="text-[0.9rem]">{{ .bio }}</div>
+        <div class="text-bold">{{ .Site.Params.Author.name }}</div>
+        <div>
+            <a class="text-sky-500" href="https://twitter.com/{{ .Site.Social.twitter }}" target="_blank" rel="noopener noreferrer">
+                @{{ .Site.Social.twitter }}
+            </a>
+        <div class="text-[0.9rem]">{{ .Site.Params.Author.bio }}</div>
     </div>
 </div>
 {{ end }}
