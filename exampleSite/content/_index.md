@@ -23,6 +23,8 @@ See the _[demo](https://berg.stafura.dev/)_.
 - Breadcrumbs
 - Social sharing
 - Meta verification
+- OpenGraph, TwitterCard support
+- Darkmode
 
 ## Documentation
 

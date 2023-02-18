@@ -1,6 +1,10 @@
 # Changelog
 
 All the changes made to Berg theme for Hugo.
+
+## v0.4.0 - 2023-02-18
+
+- feat: add darkmode
  
 ## v0.3.0 - 2023-02-17
 
