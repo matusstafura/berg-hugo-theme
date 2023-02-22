@@ -1,8 +1,18 @@
-<ul>
-    {{ $paginate := .Site.Params.Paginate | default 10 }}
-    {{ $date_format := .Site.Params.Date_Format }}
-    {{ range (.Paginator $paginate).Pages }}
-    <li>{{ .Date.Format $date_format }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-</ul>
+{{ $paginate := .Site.Params.Paginate | default 10 }}
+{{ $date_format := .Site.Params.Date_Format }}
+{{ range (.Paginator $paginate).Pages }}
+  <section
+    class="p-8 shadow border space-y-4 dark:py-8 bg-white dark:bg-inherit mb-4 max-w-none w-full mx-auto h-fit prose-img:mx-auto">
+      <h2 class="m-0">
+          <a href="{{ .Permalink }}" class="text-xl font-semibold tracking-wide hover:text-blue-400" > {{ .Title }} </a >
+      </h2>
+    <div class="text-gray-500 dark:text-gray-200">
+      {{ .Params.Description }}
+    </div>
+    <div class="text-sm">
+      <span class="flex mb-2 font-bold tracking-tight text-gray-500 dark:text-gray-300" >{{ .Params.Author }}</span >
+      <span class="text-gray-500 text-md dark:text-gray-300" >{{ .Date.Format $date_format  }}</span >
+    </div>
+  </section>
+  {{ end }}
 {{ template "_internal/pagination.html" . }}

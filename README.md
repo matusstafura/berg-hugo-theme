@@ -22,6 +22,8 @@ Berg theme is a clean and modern responsive blog theme for Hugo.
 - Breadcrumbs
 - Social sharing
 - Meta verification
+- OpenGraph, TwitterCard support
+- Dark mode
 
 ## Quick Start
 
