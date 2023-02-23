@@ -1,5 +1,5 @@
 {{ $paginate := .Site.Params.Paginate | default 10 }}
-{{ $date_format := .Site.Params.Date_Format }}
+{{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
 {{ range (.Paginator $paginate).Pages }}
   <section
     class="p-8 shadow border space-y-4 dark:py-8 bg-white dark:bg-inherit mb-4 max-w-none w-full mx-auto h-fit prose-img:mx-auto">
