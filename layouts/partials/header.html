@@ -1,11 +1,11 @@
 <div class="flex justify-between items-center w-full">
 
     <div class="flex items-center space-x-4">
-        <a href="{{ .Site.BaseURL }}"> 
-            {{ with .Site.Params.logo }} 
-                <img class="h-8" src="{{ . }}" alt="Logo">
-            {{ end }}
-        </a>
+        {{ if .Site.Params.logo }} 
+            <a href="{{ .Site.BaseURL }}"> 
+                    <img class="h-8" src="{{ .Site.Params.logo }}" alt="Logo">
+            </a>
+        {{ end }}
         <a href="{{ .Site.BaseURL }}"> 
             <div class="m-auto text-xl font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
         </a>
