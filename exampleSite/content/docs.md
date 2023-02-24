@@ -224,10 +224,39 @@ googleAnalytics = ""
 Shortcodes are simple snippets inside your content files calling built-in or custom templates.
 Just add the code to your markdown file.
 
-#### Latest posts
+- ### Latest posts
 
 ```md
 {{</* latest-post-vertical */>}}
+```
+
+- ### Horizontal card
+
+Creates a horizontal card. In markdown call shortcode and add info in 
+
+```md
+{{</* horizontal_card */>}}
+```
+
+Example:
+```md
+---
+title: "My post"
+...
+horizontal_card:
+  enable: true
+  feature_item:
+    - title: "Headline text"
+      description: "This is a description for a horizontal_card"
+      image: "images/myproject.webp"
+      link: "https://mywebsite.dev/"
+      button: "More info here"
+    - title: "Second project"
+      description: "A collection of tools for everyday use."
+      image: "images/second_project.webp"
+      link: "https://github.com/repo/repo"
+      button: "Public repo here"
+---
 ```
 
 ## Deployment
