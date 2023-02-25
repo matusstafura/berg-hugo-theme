@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{ partial "plugin/breadcrumbs" . }}
+
+<div class="text-center">
+    <h1>{{ .Title }}</h1>
+    {{ if (eq .Type "posts") }}
+    <div class="text-sm text-slate-500 py-2">
+        {{ if and (.Site.Params.Posts.showAuthor) (eq .Type "posts") }}
+            {{ partial "plugin/author" . }}
+        {{ end }}
+        {{ if .Site.Params.Posts.showDate }}
+            {{ partial "plugin/date" . }}
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+
+
+{{ partial "plugin/prevnext" . }}
+
+<div class="flex justify-between items-center">
+    <div class="space-x-2">
+        {{ if .Site.Params.Posts.showCategories }}
+        {{ range .Params.Categories }}
+        <span class="bg-blue-200 p-2 text-xs hover:bg-blue-300 rounded-full capitalize">
+            <a href="/categories/{{.}}" class="no-underline text-blue-500">{{ . }}</a>
+        </span>
+        {{ end }}
+        {{ end }}
+    </div>
+    <div>
+        {{ if .Site.Params.Posts.showShare }}
+            {{ partial "plugin/share" . }}
+        {{ end }}
+    </div>
+</div>
+
+<div id="blogpost">
+    <article class="p-8 shadow border dark:py-8 bg-white dark:bg-inherit max-w-none prose-stone w-full mx-auto h-fit dark:prose-invert prose-img:mx-auto">  
+    {{ .Content }}
+    </article>
+</div>
+
+{{ if .Site.Params.Posts.showTags }}
+{{ range .Params.Tags }}
+    <a href="/tags/{{.}}" class="bg-gray-200 p-2 space-x-3 py-1 text-xs text-gray-700 no-underline">#{{ . }}</a>
+{{ end }}
+{{ end }}
+
+{{ partial "profile" . }}
+{{ end }}
