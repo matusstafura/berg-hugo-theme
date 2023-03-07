@@ -224,10 +224,16 @@ googleAnalytics = ""
 Shortcodes are simple snippets inside your content files calling built-in or custom templates.
 Just add the code to your markdown file.
 
-- ### Latest posts
+- ### Latest posts vertical
 
 ```md
-{{</* latest-post-vertical */>}}
+{{</* latest-posts-vertical */>}}
+```
+
+- ### Latest posts horizontal
+
+```md
+{{</* latest-posts-horizontal */>}}
 ```
 
 - ### Horizontal card

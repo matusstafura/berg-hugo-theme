@@ -1,0 +1,9 @@
+<section>
+{{ $date_format := .Site.Params.Date_Format }}
+{{range (where .Site.RegularPages "Type" "posts") | first 5 }}
+    <div>
+        <a href="{{.Permalink}}">{{.Title}}</a>
+        <span> {{ if .Date }} {{ .Date.Format $date_format }} {{ end }} </span>
+    </div>
+{{end}}
+</section>
