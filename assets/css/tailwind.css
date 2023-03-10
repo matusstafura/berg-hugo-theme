@@ -14,10 +14,6 @@ body {
     src: url("/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
-#blogpost img {
-    @apply shadow-lg p-4 border;
-}
-
 /* Pagination Start */
 .pagination {
     @apply flex justify-center list-none space-x-4 py-4;

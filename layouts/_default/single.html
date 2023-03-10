@@ -35,11 +35,9 @@
     </div>
 </div>
 
-<div id="blogpost">
-    <article class="p-8 shadow border dark:border-gray-500 dark:py-8 bg-white dark:bg-inherit max-w-none prose-stone w-full mx-auto h-fit dark:prose-invert prose-img:mx-auto">  
-    {{ .Content }}
-    </article>
-</div>
+<article class="p-8 shadow border dark:border-gray-500 dark:py-8 bg-white dark:bg-inherit max-w-none prose-stone w-full mx-auto h-fit dark:prose-invert prose-img:mx-auto">  
+{{ .Content }}
+</article>
 
 {{ if .Site.Params.Posts.showTags }}
 {{ range .Params.Tags }}
