@@ -144,9 +144,15 @@ googleAnalytics = ""
   createdBy = true
 
   # custom JS files
-  # upload in `static` folder
-  # Example: ['/js/custom.js']
+  # upload to `static` folder
+  # Example: ["/js/custom.js"]
   custom_js = []
+
+  
+  # custom CSS files
+  # upload to `static` folder
+  # Example: ["/js/_custom.css"]
+  custom_css = []
 
 [params.posts]
 

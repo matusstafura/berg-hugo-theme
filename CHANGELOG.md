@@ -2,6 +2,11 @@
 
 All the changes made to Berg theme for Hugo.
 
+## v0.6.0 - 2023-03-10
+
+- add param custom_css
+- add shortcode latest-posts-horizontal
+
 ## v0.5.1 - 2023-02-25
 
 - add horizonal line menu, footer
