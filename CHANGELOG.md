@@ -2,6 +2,10 @@
 
 All the changes made to Berg theme for Hugo.
 
+## v0.6.0 - 2023-04-22
+
+- edit navigation to support multilang
+
 ## v0.5.1 - 2023-02-25
 
 - add horizonal line menu, footer
