@@ -1,16 +1,41 @@
 name: Generate Changelog
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - main
 
 jobs:
   generate-changelog:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v2
-      - name: Generate Changelog
-        uses: gerred/auto-changelog@v1
+      - name: Changelog
+        uses: ardalanamini/auto-changelog@v3
+        id: changelog
         with:
-          output-file: CHANGELOG.md
-          header-text: "Changelog"
-          commit-limit: 50
+          github-token: ${{ github.token }}
+          commit-types: |
+            breaking: Breaking Changes
+            feat: New Features
+            fix: Bug Fixes
+            revert: Reverts
+            perf: Performance Improvements
+            refactor: Refactors
+            deps: Dependencies
+            docs: Documentation Changes
+            style: Code Style Changes
+            build: Build System
+            ci: Continuous Integration
+            test: Tests
+            chore: Chores
+            other: Other Changes
+          default-commit-type: Other Changes
+          release-name: v1.0.0
+          mention-authors: true
+          mention-new-contributors: true
+          include-compare: true
+          include-pr-lints: true
+          include-commit-lints: true
+          semver: true
+
