@@ -277,6 +277,7 @@ defaultContentLanguage = 'en'
     languageName = "svenska"
     contentDir = "content/se"
 ```
+
 #### Translate 
 by filename
 - /content/about.en.md
