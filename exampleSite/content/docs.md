@@ -12,6 +12,7 @@ draft: false
 - [Menu](#menu)
 - [Settings](#settings)
 - [Shortcodes](#shortcodes)
+- [Languages](#languages)
 - [Deployment](#deployment)
 - [Development](#development)
 
@@ -258,6 +259,32 @@ horizontal_card:
       button: "Public repo here"
 ---
 ```
+
+## Languages
+
+To make site multilingual, see https://gohugo.io/content-management/multilingual/.
+
+#### Define languages in config file
+```toml
+defaultContentLanguage = 'en'
+[languages]
+  [languages.en]
+    weight = 1
+    languageName = "english"
+    contentDir = "content/en"
+  [languages.se]
+    weight = 2
+    languageName = "svenska"
+    contentDir = "content/se"
+```
+#### Translate 
+by filename
+- /content/about.en.md
+- /content/about.se.md
+
+or by directory
+- /content/en/about.md
+- /content/se/about.md
 
 ## Deployment
 
