@@ -1,0 +1,16 @@
+name: Generate Changelog
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  generate-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate Changelog
+        uses: gerred/auto-changelog@v1
+        with:
+          output-file: CHANGELOG.md
+          header-text: "Changelog"
+          commit-limit: 50
