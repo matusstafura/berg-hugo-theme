@@ -19,7 +19,6 @@ themesDir = '../..'
 [params.posts]
   showProfile = false
 
-
 [[menu.main]]
   name = "Home"
   url = "/"
