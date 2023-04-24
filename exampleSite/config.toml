@@ -11,6 +11,7 @@ themesDir = '../..'
   date_format = 'January 2, 2006'
   breadcrumbs = false
   custom_js = ['js/_custom.js']
+  custom_css = ['css/_custom.css']
 
 [markup]
   [markup.highlight]

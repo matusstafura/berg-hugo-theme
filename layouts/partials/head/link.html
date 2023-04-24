@@ -1,4 +1,7 @@
 {{ $css := resources.Get "./css/styles.css" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
-{{ $custom := resources.Get "./css/_custom.css" }}
-<link rel="stylesheet" href="{{ $custom.RelPermalink }}" />
+
+{{ range .Site.Params.custom_css }}
+    {{ $custom := resources.Get . }}
+    <link rel="stylesheet" src="{{ $custom.RelPermalink }}" />
+{{ end }}
