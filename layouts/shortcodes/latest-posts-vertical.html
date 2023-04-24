@@ -29,7 +29,7 @@
             </h1>
             <div>
                 {{ range .Params.Tags }}
-                    <a href="/tags/{{.}}" class="inline-block space-x-3 py-1 text-xs hover:underline">#{{ . }}</a>
+                    <a href="/tags/{{. | urlize}}" class="inline-block space-x-3 py-1 text-xs hover:underline">#{{ . }}</a>
                 {{ end }}
             </div>
         </div>
