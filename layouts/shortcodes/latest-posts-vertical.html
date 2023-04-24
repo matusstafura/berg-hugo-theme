@@ -12,6 +12,8 @@
                 </span>
             {{ end }}
             </div>
+            {{ $date := .Site.Params.date_format }}
+            {{ if $date}}
             <div class="flex space-x-1 items-center">
                 <p>
                     <svg class="h-4 fill-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -21,6 +23,7 @@
                 </p>
                 <p class="text-xs text-slate-400">{{ .Date.Format $date_format }}</p>
             </div>
+            {{ end }}
             <h1 class="font-bold text-xl hover:text-blue-500 dark:text-gray-200">
                 <a href="{{ .Permalink }}" title={{ .Title }}>{{ .Title }}</a>
             </h1>
