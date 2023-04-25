@@ -148,6 +148,11 @@ googleAnalytics = ""
   # Example: ['css/_custom.css']
   custom_css = []
 
+  # shows language switcher
+  # for multilingual site
+  # true or false
+  showLanguageSelector = false
+
 [params.posts]
 
   # Show prev/next post links
