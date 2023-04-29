@@ -153,6 +153,10 @@ googleAnalytics = ""
   # true or false
   showLanguageSelector = false
 
+  # shows dark mode toggle
+  # true or false
+  showDarkModeToggle = false
+
 [params.posts]
 
   # Show prev/next post links

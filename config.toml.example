@@ -49,9 +49,23 @@ googleAnalytics = ""
   createdBy = true
 
   # custom JS files
-  # place in static folder
-  # Example: ['/js/custom.js']
+  # upload in `assets` folder
+  # Example: ['js/_custom.js']
   custom_js = []
+
+  # custom CSS files
+  # upload in `assets` folder
+  # Example: ['css/_custom.css']
+  custom_css = []
+
+  # shows language switcher
+  # for multilingual site
+  # true or false
+  showLanguageSelector = false
+
+  # shows dark mode toggle
+  # true or false
+  showDarkModeToggle = false
 
 [params.posts]
 

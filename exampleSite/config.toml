@@ -12,6 +12,7 @@ themesDir = '../..'
   breadcrumbs = false
   custom_js = ['js/_custom.js']
   custom_css = ['css/_custom.css']
+  showDarkModeToggle = true
 
 [markup]
   [markup.highlight]
