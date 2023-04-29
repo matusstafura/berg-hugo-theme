@@ -35,14 +35,14 @@
     </div>
 </div>
 
-<article class="p-8 shadow border dark:border-gray-500 dark:py-8 bg-white dark:bg-inherit max-w-none prose-stone w-full mx-auto h-fit dark:prose-invert prose-img:mx-auto">  
-{{ .Content }}
+<article>  
+    {{ .Content }}
 </article>
 
 {{ if .Site.Params.Posts.showTags }}
-{{ range .Params.Tags }}
-    <a href="/tags/{{. | urlize}}" class="bg-gray-200 p-2 space-x-3 py-1 text-xs text-gray-700 no-underline">#{{ . }}</a>
-{{ end }}
+    {{ range .Params.Tags }}
+        <a href="/tags/{{. | urlize}}" class="bg-gray-200 p-2 space-x-3 py-1 text-xs text-gray-700 no-underline">#{{ . }}</a>
+    {{ end }}
 {{ end }}
 
 {{ partial "profile" . }}
