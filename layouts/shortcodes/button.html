@@ -1,0 +1,6 @@
+{{ $text := .Get "text" }}
+{{ $link := .Get "link" }}
+<div class="my-4">
+  <a href="{{ $link }}" class="px-6 py-3 bg-blue-600 no-underline rounded shadow-md text-blue-50 hover:bg-blue-500 dark:hover:bg-blue-400">{{ $text }}</a>
+</div>
+

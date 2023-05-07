@@ -251,6 +251,13 @@ Creates a horizontal card. In markdown call shortcode and add info in
 
 ```md
 {{</* horizontal_card */>}}
+
+- ### Button
+
+Creates a button with link
+
+```md
+{{</* button link="https://www.example.com/" text="Click me!" */>}}
 ```
 
 Example:
