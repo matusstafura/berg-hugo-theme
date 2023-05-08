@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html {{ with .Site.Language.Lang }}lang="{{.}}"{{ end }}>
     {{- partial "head.html" . -}}
     <body class="bg-auto h-full min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-slate-700 dark:to-slate-600">
     {{- partial "body/first.html" . -}}
