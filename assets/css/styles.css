@@ -1042,24 +1042,9 @@ video {
   margin-right: auto;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .mb-2 {
@@ -1511,6 +1496,8 @@ body {
   font-smooth: always;
 
   src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+
+  font-display: swap;
 }
 
 /* Pagination Start */

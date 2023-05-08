@@ -12,6 +12,7 @@ body {
     font-style: normal;
     font-smooth: always;
     src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 
 /* Pagination Start */
