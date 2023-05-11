@@ -2,6 +2,21 @@
 
 All the changes made to Berg theme for Hugo.
 
+## v0.7.0 - 2023-05-11
+
+- feat: webp support
+- docs: edit paths for images
+- update required width and height
+- img fix width, alt
+- fixes lang html; button toggle
+- tagmanager defer
+- font-display: swap
+- add button shortcode
+- ability to hide date in posts list
+- featured image in posts list
+- minor: footer year and link
+- config: showDarkModeToggle; fix resp padding
+
 ## v0.6.2 - 2023-04-25
 
 - feat: lang switcher in navbar
