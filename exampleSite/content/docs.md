@@ -317,11 +317,12 @@ DigitalOcean will automatically recognize your repo as Hugo.
 
 1. Create an account on [Digital Ocean](https://m.do.co/c/74a3950fb600) or sign-in.
 2. Click on link `Apps` in the sidebar and click `Create App` on the right.
-![](/images/deploy/do1.jpeg)
+![](/images/deploy/do1.jpg)
+
 3. Choose Service Provider.
-![](/images/deploy/do2.jpeg)
+![](/images/deploy/do2.jpg)
 4. In the review section, click Create Resources.
-![](/images/deploy/do3.jpeg)
+![](/images/deploy/do3.jpg)
 5. Within few minutes your web will be deployed.
 
 ## Development
