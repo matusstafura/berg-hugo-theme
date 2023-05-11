@@ -1017,6 +1017,10 @@ video {
   border-width: 0;
 }
 
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1726,12 +1730,6 @@ p {
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 
-@media (min-width: 640px) {
-  .sm\:p-0 {
-    padding: 0px;
-  }
-}
-
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -1769,6 +1767,10 @@ p {
 @media (min-width: 1280px) {
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .xl\:p-0 {
+    padding: 0px;
   }
 }
 
