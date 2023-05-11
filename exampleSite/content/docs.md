@@ -333,3 +333,8 @@ Tailwind CSS
 npm run dev
 ```
 
+Add webp images recursively in static folder
+
+```shell
+bash webp.sh
+```

@@ -25,6 +25,7 @@ See the _[demo](https://berg.stafura.dev/)_.
 - Meta verification
 - OpenGraph, TwitterCard support
 - Darkmode
+- WebP Support
 
 ## Documentation
 
