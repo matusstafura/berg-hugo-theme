@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 /* Font */
 body {
     font-family: "Roboto", sans-serif;
 }
+
 
 @font-face {
     font-family: "Roboto";
@@ -53,4 +53,4 @@ p {
     @apply text-[1.05rem] leading-relaxed text-slate-700 antialiased dark:text-gray-100;
 }
 
- 
+@tailwind utilities;

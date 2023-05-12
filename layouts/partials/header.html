@@ -1,7 +1,8 @@
+{{ $theme := .Site.Params.colorTheme }}
 {{ if .Site.Params.ShowLanguageSelector }}
 <div class="flex justify-end text-sm w-full space-x-2 mt-2">
     {{ range .Site.Languages }}
-        <a href="/{{ .Lang }}/" class="hover:text-blue-400 text-slate-700 dark:text-slate-100 dark:hover:text-slate-50 uppercase">{{ .Lang }}</a>
+    <a href="/{{ .Lang }}/" class="hover:text-{{ $theme }}-400 text-slate-700 dark:text-slate-100 dark:hover:text-slate-50 uppercase">{{ .Lang }}</a>
     {{ end }}
 </div>
 {{ end }}
@@ -10,7 +11,7 @@
     <div class="flex items-center space-x-4">
         {{ if .Site.Params.logo }} 
             <a href="{{ .Site.BaseURL }}"> 
-                    <img class="h-8" src="{{ .Site.Params.logo }}" alt="Logo">
+                <img class="h-8" src="{{ .Site.Params.logo }}" alt="Logo">
             </a>
         {{ end }}
         <a href="{{ .Site.BaseURL }}"> 
@@ -22,7 +23,7 @@
         <div class="hidden ml-auto lg:flex">
             <div class="flex space-x-8 font-semibold text-slate-700 dark:text-slate-100">
                 {{ range .Site.Menus.main }}
-                <a href="{{ .URL | absLangURL }}" class="hover:text-blue-400">{{ .Name }}</a>
+                <a href="{{ .URL | absLangURL }}" class="hover:text-primary-400">{{ .Name }}</a>
                 {{ end }}
             </div>
         </div>

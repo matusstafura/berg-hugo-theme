@@ -22,8 +22,8 @@
     <div class="space-x-2">
         {{ if .Site.Params.Posts.showCategories }}
         {{ range .Params.Categories }}
-        <span class="bg-blue-200 p-2 text-xs hover:bg-blue-300 rounded-full capitalize">
-            <a href="/categories/{{.}}" class="no-underline text-blue-500">{{ . }}</a>
+        <span class="bg-primary-200 p-2 text-xs hover:bg-primary-300 rounded-full capitalize">
+            <a href="/categories/{{.}}" class="no-underline text-primary-500">{{ . }}</a>
         </span>
         {{ end }}
         {{ end }}

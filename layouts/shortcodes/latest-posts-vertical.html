@@ -7,7 +7,7 @@
         <div class="space-y-3">
             <div class="space-x-2">
                 {{ range .Params.Categories }}
-                <span class="bg-blue-200 p-2 text-xs text-blue-500 hover:bg-blue-300 rounded-full capitalize">
+                <span class="bg-primary-200 p-2 text-xs text-primary-500 hover:bg-primary-300 rounded-full capitalize">
                     <a href="/categories/{{.}}" class="">{{ . }}</a>
                 </span>
             {{ end }}
@@ -24,7 +24,7 @@
                 <p class="text-xs text-slate-400">{{ .Date.Format $date_format }}</p>
             </div>
             {{ end }}
-            <h1 class="font-bold text-xl hover:text-blue-500 dark:text-gray-200">
+            <h1 class="font-bold text-xl hover:text-primary-500 dark:text-gray-200">
                 <a href="{{ .Permalink }}" title={{ .Title }}>{{ .Title }}</a>
             </h1>
             <div>
