@@ -1,7 +1,8 @@
 ---
-title = "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: 
+url: 
 description: ""
+date: {{ .Date }}
 featuredImage: ""
 tags: []
 categories: []
