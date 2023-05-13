@@ -1,14 +1,18 @@
-<hr class="w-full border-slate-900/10 dark:border-slate-50/[0.06]">
-<footer class="py-4 w-full text-gray-500 text-[0.8rem] dark:text-gray-200 md:justify-between lg:flex">
-    <div class="flex space-x-1">
-        <div>© {{ dateFormat "2006" (now) }} {{ .Site.BaseURL }}</div>
-        {{ if .Site.Params.createdBy }}
-            {{ partial "plugin/created" .}}
-        {{ end }}
+<div>
+    <div class="mx-auto max-w-4xl">
+    <hr class="w-full border-slate-900/10 dark:border-slate-50/[0.06]">
+    <footer class="p-4 w-full text-gray-500 text-[0.8rem] dark:text-gray-200 md:justify-between lg:flex">
+        <div class="flex space-x-1">
+            <div>© {{ dateFormat "2006" (now) }} {{ .Site.BaseURL }}</div>
+            {{ if .Site.Params.createdBy }}
+                {{ partial "plugin/created" .}}
+            {{ end }}
+        </div>
+        <div class="lg:flex lg:space-x-4">
+            {{ range .Site.Menus.footer }}
+            <div><a href="{{ .URL | absLangURL }}" class="hover:underline">{{ .Name }}</a></div>
+            {{ end }}
+        </div>
+    </footer>
     </div>
-    <div class="lg:flex lg:space-x-4">
-        {{ range .Site.Menus.footer }}
-        <div><a href="{{ .URL | absLangURL }}" class="hover:underline">{{ .Name }}</a></div>
-        {{ end }}
-    </div>
-</footer>
+</div>

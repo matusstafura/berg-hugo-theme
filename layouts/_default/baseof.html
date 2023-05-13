@@ -5,9 +5,9 @@
     <body>
         {{- partial "body/first.html" . -}}
         <div class="bg-auto h-full min-h-screen bg-gradient-to-b from-primary-50 to-white dark:from-slate-700 dark:to-slate-600">
-        <div class="container mx-auto max-w-4xl p-4 xl:p-0">
+        <div class="mx-auto xl:p-0">
             {{- partial "header.html" . -}}
-            <div class="py-8 prose dark:prose-invert max-w-none" id="main">
+            <div class="py-8 px-4 mx-auto max-w-4xl prose dark:prose-invert" id="main">
             {{- block "main" . }}{{- end }}
             </div>
             {{- partial "footer.html" . -}}
