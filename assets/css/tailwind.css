@@ -9,6 +9,7 @@ body {
 .prose a {
     @apply text-primary-600 no-underline;
 }
+
 .prose a:hover {
     @apply text-secondary-500;
 }
