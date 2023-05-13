@@ -1011,6 +1011,15 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.prose a {
+  color: var(--color-primary-600);
+  text-decoration-line: none;
+}
+
+.prose h2 {
+  font-size: 2rem;
+}
+
 @font-face {
   font-family: "Roboto";
 
