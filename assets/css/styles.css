@@ -1191,8 +1191,16 @@ p {
   height: 100%;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-1\/2 {
@@ -1217,6 +1225,10 @@ p {
 
 .w-full {
   width: 100%;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .max-w-4xl {
@@ -1375,6 +1387,10 @@ p {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-primary-500 {
+  background-color: var(--color-primary-500);
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1497,12 +1513,26 @@ p {
   line-height: 1rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .uppercase {
@@ -1559,6 +1589,19 @@ p {
   color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
+.text-primary-100 {
+  color: var(--color-primary-100);
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-primary-200 {
+  color: var(--color-primary-200);
+}
+
 .no-underline {
   text-decoration-line: none;
 }
@@ -1598,20 +1641,12 @@ p {
   background-color: var(--color-primary-300);
 }
 
-.hover\:bg-primary-500:hover {
-  background-color: var(--color-primary-500);
-}
-
-.hover\:bg-secondary-500:hover {
-  background-color: var(--color-secondary-500);
-}
-
-.hover\:bg-secondary-50:hover {
-  background-color: var(--color-secondary-50);
-}
-
 .hover\:bg-primary-50:hover {
   background-color: var(--color-primary-50);
+}
+
+.hover\:bg-primary-500:hover {
+  background-color: var(--color-primary-500);
 }
 
 .hover\:text-primary-400:hover {
@@ -1622,38 +1657,25 @@ p {
   color: var(--color-primary-500);
 }
 
+.hover\:text-primary-600:hover {
+  color: var(--color-primary-600);
+}
+
 .hover\:text-slate-600:hover {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
-.hover\:text-secondary-50:hover {
-  color: var(--color-secondary-50);
+.hover\:text-primary-50:hover {
+  color: var(--color-primary-50);
 }
 
-.hover\:text-secondary-600:hover {
-  color: var(--color-secondary-600);
-}
-
-.hover\:text-secondary-100:hover {
-  color: var(--color-secondary-100);
-}
-
-.hover\:text-primary-600:hover {
-  color: var(--color-primary-600);
+.hover\:text-secondary-500:hover {
+  color: var(--color-secondary-500);
 }
 
 .hover\:underline:hover {
   text-decoration-line: underline;
-}
-
-.hover\:prose-a\:text-primary-600 :is(:where(a):not(:where([class~="not-prose"] *))):hover {
-  color: var(--color-primary-600);
-}
-
-.hover\:prose-a\:text-blue-600 :is(:where(a):not(:where([class~="not-prose"] *))):hover {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .dark .dark\:border-slate-50\/\[0\.06\] {
@@ -1669,21 +1691,13 @@ p {
   background-color: inherit;
 }
 
-.dark .dark\:bg-primary-600 {
-  background-color: var(--color-primary-600);
+.dark .dark\:bg-secondary-600 {
+  background-color: var(--color-secondary-600);
 }
 
 .dark .dark\:bg-slate-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-secondary-50 {
-  background-color: var(--color-secondary-50);
-}
-
-.dark .dark\:bg-secondary-600 {
-  background-color: var(--color-secondary-600);
 }
 
 .dark .dark\:from-slate-700 {

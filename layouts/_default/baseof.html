@@ -6,11 +6,13 @@
         {{- partial "body/first.html" . -}}
         <div class="bg-auto h-full min-h-screen bg-gradient-to-b from-primary-50 to-white dark:from-slate-700 dark:to-slate-600">
         <div class="mx-auto xl:p-0">
-            {{- partial "header.html" . -}}
+            {{ $header := .Site.Params.Header | default "header" }}
+            {{- partial (printf "headers/%s.html" $header) . -}}
             <div class="py-8 px-4 mx-auto max-w-4xl prose dark:prose-invert" id="main">
-            {{- block "main" . }}{{- end }}
+                {{- block "main" . }}{{- end }}
             </div>
-            {{- partial "footer.html" . -}}
+            {{ $footer := .Site.Params.Header | default "footer" }}
+            {{- partial (printf "footers/%s.html" $footer) . -}}
         </div>
         {{ partial "scripts.html" . }}
         </div>
