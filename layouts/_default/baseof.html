@@ -11,7 +11,7 @@
             <div class="py-8 px-4 mx-auto max-w-4xl prose dark:prose-invert" id="main">
                 {{- block "main" . }}{{- end }}
             </div>
-            {{ $footer := .Site.Params.Header | default "footer" }}
+            {{ $footer := .Site.Params.Footer | default "footer" }}
             {{- partial (printf "footers/%s.html" $footer) . -}}
         </div>
         {{ partial "scripts.html" . }}

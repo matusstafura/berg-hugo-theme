@@ -2,7 +2,6 @@
 {{ partial "plugin/breadcrumbs" . }}
 
 <div class="text-center">
-    <h1>{{ .Title }}</h1>
     {{ if (eq .Type "posts") }}
     <div class="text-sm text-slate-500 py-2">
         {{ if and (.Site.Params.Posts.showAuthor) (eq .Type "posts") }}
