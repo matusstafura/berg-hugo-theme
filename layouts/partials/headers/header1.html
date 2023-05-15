@@ -64,8 +64,14 @@
             </ul>
         </div>
     </div>
+    {{ if or .Title .Description }}
     <div class="mx-auto max-w-4xl py-8">
-        <h1 class="text-5xl text-center pb-4 text-white font-extrabold">{{ .Title }}</h1>
-        <p class="text-xl text-center text-white font-extrabold">{{ .Description }}</p>
+        {{ if .Title }}
+        <h1 class="text-5xl text-center pb-4 text-black font-extrabold">{{ .Title }}</h1>
+        {{ end }}
+        {{ if .Description }}
+        <p class="text-xl text-center text-black font-extrabold">{{ .Description }}</p>
+        {{ end }}
     </div>
+    {{ end }}
 </div>
