@@ -9,6 +9,9 @@
             {{ $header := .Site.Params.Header | default "header" }}
             {{- partial (printf "headers/%s.html" $header) . -}}
             <div class="py-8 px-4 mx-auto max-w-4xl prose dark:prose-invert" id="main">
+                {{ if .Params.toc }}
+                    {{ partial "toc.html" . }}
+                {{ end }}
                 {{- block "main" . }}{{- end }}
             </div>
             {{ $footer := .Site.Params.Footer | default "footer" }}

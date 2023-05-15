@@ -1191,16 +1191,12 @@ p {
   height: 100%;
 }
 
-.h-32 {
-  height: 8rem;
+.min-h-full {
+  min-height: 100%;
 }
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-full {
-  min-height: 100%;
 }
 
 .w-1\/2 {
@@ -1225,10 +1221,6 @@ p {
 
 .w-full {
   width: 100%;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .max-w-4xl {
@@ -1378,6 +1370,10 @@ p {
   background-color: var(--color-primary-50);
 }
 
+.bg-primary-500 {
+  background-color: var(--color-primary-500);
+}
+
 .bg-primary-600 {
   background-color: var(--color-primary-600);
 }
@@ -1385,10 +1381,6 @@ p {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-primary-500 {
-  background-color: var(--color-primary-500);
 }
 
 .bg-gradient-to-b {
@@ -1490,6 +1482,11 @@ p {
   line-height: 2rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-\[0\.8rem\] {
   font-size: 0.8rem;
 }
@@ -1513,26 +1510,16 @@ p {
   line-height: 1rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-extrabold {
   font-weight: 800;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -1551,6 +1538,11 @@ p {
   letter-spacing: 0.025em;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1559,6 +1551,10 @@ p {
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-primary-100 {
+  color: var(--color-primary-100);
 }
 
 .text-primary-50 {
@@ -1589,17 +1585,9 @@ p {
   color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
-.text-primary-100 {
-  color: var(--color-primary-100);
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-primary-200 {
-  color: var(--color-primary-200);
 }
 
 .no-underline {
@@ -1661,17 +1649,13 @@ p {
   color: var(--color-primary-600);
 }
 
+.hover\:text-secondary-500:hover {
+  color: var(--color-secondary-500);
+}
+
 .hover\:text-slate-600:hover {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
-}
-
-.hover\:text-primary-50:hover {
-  color: var(--color-primary-50);
-}
-
-.hover\:text-secondary-500:hover {
-  color: var(--color-secondary-500);
 }
 
 .hover\:underline:hover {
