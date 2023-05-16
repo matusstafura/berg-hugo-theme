@@ -1,4 +1,5 @@
 {{ define "main" }}
+
 {{ partial "plugin/breadcrumbs" . }}
 
 <div class="text-center">
@@ -24,12 +25,6 @@
 <article>  
     {{ .Content }}
 </article>
-
-{{ if .Site.Params.Posts.showTags }}
-    {{ range .Params.Tags }}
-        <a href="/tags/{{. | urlize}}" class="bg-gray-200 p-2 space-x-3 py-1 text-xs text-gray-700 no-underline">#{{ . }}</a>
-    {{ end }}
-{{ end }}
 
 {{ partial "plugin/prevnext" . }}
 
