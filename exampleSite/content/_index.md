@@ -7,7 +7,8 @@ toc: true
 ## Introduction
 
 Berg theme is a clean and modern responsive blog theme for Hugo with TailwindCSS.
-See the _[demo](https://berg.stafura.dev/)_.
+
+{{< button link="https://berg.stafura.dev/" text="Demo" target="_blank">}}
 
 ## Features
 

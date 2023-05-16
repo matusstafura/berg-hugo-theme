@@ -25,6 +25,14 @@ body {
 }
 /* shortcode button end */
 
+article img {
+    @apply mx-auto rounded-lg shadow-lg;
+}
+
+figcaption {
+    @apply text-center text-sm;
+}
+
 .prose a:hover {
     @apply text-secondary-500;
 }

@@ -14,9 +14,6 @@
     {{ end }}
 </div>
 
-
-{{ partial "plugin/prevnext" . }}
-
 {{ if .Site.Params.Posts.showCategories }}
 <div class="space-x-2">
     {{ range .Params.Categories }}
@@ -42,6 +39,8 @@
         <a href="/tags/{{. | urlize}}" class="bg-gray-200 p-2 space-x-3 py-1 text-xs text-gray-700 no-underline">#{{ . }}</a>
     {{ end }}
 {{ end }}
+
+{{ partial "plugin/prevnext" . }}
 
 {{ partial "profile" . }}
 {{ end }}

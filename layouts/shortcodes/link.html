@@ -1,0 +1,5 @@
+{{ $title := .Get "title" }}
+{{ $url := .Get "url" }}
+{{ $target := .Get "target" | default "_blank" }}
+<a href="{{ $url }}" title="{{ $title }}" rel="noopener noreferrer nofollow" target="{{ $target }}">{{ $title }}</a>
+

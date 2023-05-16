@@ -3,6 +3,7 @@
 {{ $target := .Get "target" | default "_self" }}
 
 <div class="my-4" id="button">
-  <a href="{{ $link }}" class="px-6 py-3 no-underline rounded shadow-md dark:hover:bg-primary-400" target="{{ $target }}">{{ $text }}</a>
+  <a href="{{ $link }}" class="px-6 py-3 no-underline rounded shadow-md dark:hover:bg-primary-400" target="{{ $target }}" 
+    rel="noopener noreferrer nofollow">{{ $text }}</a>
 </div>
 

@@ -300,6 +300,14 @@ horizontal_card:
 ---
 ```
 
+### Link
+
+Creates safe href nofollow link; opens in new window by default.
+Recommended for external links.
+
+```md
+{{</* link href="https://www.example.com/" title="source on wikipedia" */>}}
+```
 ## Languages
 
 To make site multilingual, see https://gohugo.io/content-management/multilingual/.
