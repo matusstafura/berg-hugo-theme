@@ -5,7 +5,7 @@ featuredImage: /images/lao.jpg
 description: "Go is a statically typed, concurrent, garbage-collected programming language developed at Google in 2007."
 draft: false
 tags: ["go", "golang"]
-categories: ["programming", "golang"]
+categories: ["programming"]
 featuredImage: /images/blog/go.jpg
 ---
 

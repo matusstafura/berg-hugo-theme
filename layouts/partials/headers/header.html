@@ -74,4 +74,13 @@
         {{ end }}
     </div>
     {{ end }}
+    {{ if .Site.Params.Posts.showCategories }}
+    <div class="mx-auto max-w-4xl justify-center flex flex-wrap space-x-2">
+        {{ range .Params.Categories }}
+        <span class="text-center">
+            <a href="/categories/{{.}}" class="no-underline text-[0.8rem] hover:underline text-primary-500 font-semibold uppercase">{{ . }}</a>
+        </span>
+        {{ end }}
+    </div>
+    {{ end }}
 </div>

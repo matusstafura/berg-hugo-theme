@@ -1,4 +1,4 @@
-<div class="bg-primary-500">
+<div class="bg-primary-600">
     <div class="mx-auto p-4 flex max-w-4xl justify-between items-center w-full py-4">
         {{ if .Site.Params.ShowLanguageSelector }}
         <div class="flex justify-end text-sm w-full space-x-2 mt-2">
@@ -64,13 +64,22 @@
             </ul>
         </div>
     </div>
+    {{ if .Site.Params.Posts.showCategories }}
+    <div class="mx-auto max-w-4xl justify-center flex flex-wrap space-x-2">
+        {{ range .Params.Categories }}
+        <span class="text-center">
+            <a href="/categories/{{.}}" class="no-underline text-[0.8rem] hover:underline text-primary-50 font-semibold uppercase">{{ . }}</a>
+        </span>
+        {{ end }}
+    </div>
+    {{ end }}
     {{ if or .Title .Description }}
-    <div class="mx-auto max-w-4xl py-8">
+    <div class="mx-auto max-w-2xl py-8">
         {{ if .Title }}
-        <h1 class="text-5xl text-center pb-4 text-black font-extrabold">{{ .Title }}</h1>
+        <h1 class="text-5xl text-center pb-4 text-primary-50 font-extrabold">{{ .Title }}</h1>
         {{ end }}
         {{ if .Description }}
-        <p class="text-xl text-center text-black font-extrabold">{{ .Description }}</p>
+        <p class="text-xl text-center text-primary-50 font-extrabold">{{ .Description }}</p>
         {{ end }}
     </div>
     {{ end }}

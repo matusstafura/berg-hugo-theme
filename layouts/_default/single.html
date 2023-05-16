@@ -14,15 +14,6 @@
     {{ end }}
 </div>
 
-{{ if .Site.Params.Posts.showCategories }}
-<div class="space-x-2">
-    {{ range .Params.Categories }}
-    <span class="bg-primary-200 p-2 text-xs hover:bg-primary-300 rounded-full capitalize">
-        <a href="/categories/{{.}}" class="no-underline text-primary-500">{{ . }}</a>
-    </span>
-    {{ end }}
-</div>
-{{ end }}
 
 {{ if .Site.Params.Posts.showShare }}
 <div>

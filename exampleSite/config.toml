@@ -5,6 +5,7 @@ theme = 'berg'
 themesDir = '../..'
 
 [params]
+  header = "header1"
   logo = '/images/logo.svg'
   favicon = '/images/logo.svg'
   description = 'A documentation for a simple, clean, and responsive Hugo theme.'
@@ -24,6 +25,7 @@ themesDir = '../..'
 
 [params.posts]
   showProfile = false
+  showCategories = true
 
 [[menu.main]]
   name = "Home"
