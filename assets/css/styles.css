@@ -982,6 +982,36 @@ body {
   text-decoration-line: none;
 }
 
+/* shortcode button start */
+
+#button {
+  display: flex;
+  justify-content: center;
+}
+
+#button a {
+  background-color: var(--color-primary-500);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-primary-50);
+}
+
+#button a:hover {
+  background-color: var(--color-primary-700);
+}
+
+#button a[target="_blank"]::after {
+  content: '\2750';
+  margin-left: 0.5rem;
+  color: var(--color-primary-50);
+}
+
+#button a[target="_blank"]::after:hover {
+  background-color: var(--color-primary-700);
+}
+
+/* shortcode button end */
+
 .prose a:hover {
   color: var(--color-secondary-500);
 }
@@ -1374,10 +1404,6 @@ p {
   background-color: var(--color-primary-500);
 }
 
-.bg-primary-600 {
-  background-color: var(--color-primary-600);
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1631,10 +1657,6 @@ p {
 
 .hover\:bg-primary-50:hover {
   background-color: var(--color-primary-50);
-}
-
-.hover\:bg-primary-500:hover {
-  background-color: var(--color-primary-500);
 }
 
 .hover\:text-primary-400:hover {

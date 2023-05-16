@@ -1,6 +1,8 @@
 {{ $text := .Get "text" }}
 {{ $link := .Get "link" }}
-<div class="my-4">
-  <a href="{{ $link }}" class="px-6 py-3 bg-primary-600 no-underline rounded shadow-md text-primary-50 hover:bg-primary-500 dark:hover:bg-primary-400">{{ $text }}</a>
+{{ $target := .Get "target" | default "_self" }}
+
+<div class="my-4" id="button">
+  <a href="{{ $link }}" class="px-6 py-3 no-underline rounded shadow-md dark:hover:bg-primary-400" target="{{ $target }}">{{ $text }}</a>
 </div>
 

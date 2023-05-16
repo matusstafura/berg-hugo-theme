@@ -10,6 +10,21 @@ body {
     @apply text-primary-600 no-underline;
 }
 
+/* shortcode button start */
+#button {
+    @apply flex justify-center;
+}
+
+#button a {
+    @apply text-primary-50 bg-primary-500 hover:bg-primary-700 text-sm;
+}
+
+#button a[target="_blank"]::after {
+  content: '\2750';
+  @apply text-primary-50 hover:bg-primary-700 ml-2;
+}
+/* shortcode button end */
+
 .prose a:hover {
     @apply text-secondary-500;
 }
