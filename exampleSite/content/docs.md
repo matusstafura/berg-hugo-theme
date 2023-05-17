@@ -8,7 +8,7 @@ toc: true
 
 Install Hugo on macOS, Linux, Windows, BSD, and on any machine that can run the Go compiler tool chain.
 
-For full info visit official doc: [https://gohugo.io/installation/](https://gohugo.io/installation/)
+For full info visit official doc: {{< link url="https://gohugo.io/installation/" title="https://gohugo.io/installation/" >}}
 
 ## Quick Start
 
