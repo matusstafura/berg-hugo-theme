@@ -1,0 +1,20 @@
+{{ $paginate := .Site.Params.Paginate | default 10 }}
+{{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-16">
+{{range (where .Site.RegularPages "Type" "posts") | first 5 }}
+  <section class="dark:py-8 space-y-2 dark:bg-inherit">
+    {{ partial "plugin/categories.html" . }}
+    <h2>
+        <a href="{{ .Permalink }}" class="font-bold tracking-wide hover:text-primary-400" > {{ .Title }} </a >
+    </h2>
+    {{ if .Params.featuredImage }}
+    <div>
+      <a href="{{ .Permalink }}"><img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" /></a>
+    </div>
+    {{ end }}
+    <div class="">
+        {{ .Params.Description }}
+    </div>
+  </section>
+  {{ end }}
+</div>

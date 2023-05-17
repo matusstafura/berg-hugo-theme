@@ -7,7 +7,7 @@ body {
 }
 
 .prose a {
-    @apply text-primary-600 no-underline;
+    @apply text-primary-600 no-underline dark:text-primary-400;
 }
 
 /* shortcode button start */
@@ -40,6 +40,7 @@ figcaption {
 
 .prose h2 {
     font-size: 2rem;
+    @apply font-bold;
 }
 
 @font-face {

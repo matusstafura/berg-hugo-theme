@@ -1,10 +1,8 @@
 {{ if .Site.Params.Posts.showCategories }}
-<div class="mx-auto max-w-4xl justify-center flex flex-wrap space-x-2">
+<div class="space-x-2">
     {{ range .Params.Categories }}
     {{ $category := . | urlize }}
-    <span class="text-center">
-        <a href="/categories/{{ $category }}/" class="no-underline text-[0.8rem] hover:underline font-semibold uppercase">{{ . }}</a>
-    </span>
+    <a href="/categories/{{ $category }}/" class="no-underline text-[0.8rem] hover:underline font-bold tracking-wide uppercase">{{ . }}</a>
     {{ end }}
 </div>
 {{ end }}
