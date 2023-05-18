@@ -308,6 +308,27 @@ Recommended for external links.
 ```md
 {{</* link href="https://www.example.com/" title="source on wikipedia" */>}}
 ```
+
+### FAQ Google Schema
+
+add to frontmatter
+
+```md
+---
+questions:
+  - question: "Question 1"
+    answer: "This is the answer to Question 1."
+  - question: "Question 2"
+    answer: "Here's the answer to Question 2."
+---
+```
+
+and then in markdown
+
+```md
+{{</* faq */>}}
+```
+
 ## Languages
 
 To make site multilingual, see https://gohugo.io/content-management/multilingual/.

@@ -1,0 +1,21 @@
+{{ $faqData := .Page.Params.questions }}
+
+{{ $faqDataLength := len $faqData }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $index, $faq := $faqData -}}
+    {
+      "@type": "Question",
+      "name": "{{ $faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq.answer }}"
+      }
+    }{{ if ne $index (sub $faqDataLength 1) }},{{ end }}
+    {{- end -}}
+  ]
+}
+</script>
