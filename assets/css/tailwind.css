@@ -21,13 +21,17 @@ body {
 
 /* shortcode button end */
 
+#credits a {
+    @apply text-xs block text-primary-500;
+}
+
 a[target="_blank"]::after {
   content: '\2750';
   @apply ml-2;
 }
 
 article img {
-    @apply mx-auto rounded-lg shadow-lg;
+    @apply mx-auto rounded-lg;
 }
 
 figcaption {

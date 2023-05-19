@@ -1006,6 +1006,13 @@ body {
 
 /* shortcode button end */
 
+#credits a {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--color-primary-500);
+}
+
 a[target="_blank"]::after {
   content: '\2750';
   margin-left: 0.5rem;
@@ -1015,9 +1022,6 @@ article img {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.5rem;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 figcaption {

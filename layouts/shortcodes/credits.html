@@ -1,4 +1,6 @@
-{{ $author := .Get "author" }}
-{{ $text := .Get "text" }}
-{{ $link := .Get "link" }}
-<p class="text-sm">{{ $text }} - <a href="{{ $link }}" target="_blank">{{ $author }}</a></p>
+{{ $inner := .Inner }}
+<hr class="my-4">
+<div class="text-sm font-bold">Credits:</div>
+<div id="credits">
+{{ $inner }}
+</div>
