@@ -1,23 +1,14 @@
-{{ $assets := newScratch }}
-{{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorTheme | default "blue")) }}
-{{ if not $cssScheme }}
-{{ $cssScheme = resources.Get "css/schemes/blue.css" }}
-{{ end }}
-
-{{ $assets.Add "css" (slice $cssScheme) }}
-{{ $cssMain := resources.Get "css/styles.css" }}
-
-{{ $assets.Add "css" (slice $cssMain) }}
-{{ $cssCustom := resources.Get "css/_custom.css" }}
-{{ if $cssCustom }}
-{{ $assets.Add "css" (slice $cssCustom) }}
-{{ end }}
-
-{{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
-
-<link
-type="text/css"
-rel="stylesheet"
-href="{{ $bundleCSS.RelPermalink }}"
-integrity="{{ $bundleCSS.Data.Integrity }}"
-/>
+{{- $assets := newScratch }}
+{{- $cssScheme := resources.Get (printf "css/schemes/%s.css" (lower .Site.Params.colorTheme | default "blue")) }}
+{{- if not $cssScheme }}
+{{- $cssScheme = resources.Get "css/schemes/blue.css" }}
+{{- end }}
+{{- $assets.Add "css" (slice $cssScheme) }}
+{{- $cssMain := resources.Get "css/styles.css" }}
+{{- $assets.Add "css" (slice $cssMain) }}
+{{- $cssCustom := resources.Get "css/_custom.css" }}
+{{- if $cssCustom }}
+{{- $assets.Add "css" (slice $cssCustom) }}
+{{- end }}
+{{- $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink | absLangURL }}" integrity="{{ $bundleCSS.Data.Integrity }}" />
