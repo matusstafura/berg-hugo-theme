@@ -106,7 +106,6 @@ The `ordered` option controls whether the table of contents will be ordered or u
 
 By adding the front matter configuration and modifying the `config.toml` file, you can automatically generate a table of contents for your Hugo content files based on the specified heading levels.
 
-
 ## Settings
 
 To change settings, edit file config.toml.
