@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 gap-x-8 md:grid-cols-2 xl:grid-cols-3 py-4 gap-y-12 not-prose">
-    {{ $count := .Site.Params.latestPostsCount | default 3 }}
+    {{ $count := .Get "count" | default 3 }}
     {{ $date_format := .Site.Params.Date_Format }}
     {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
     <div class="rounded-xl space-y-4">

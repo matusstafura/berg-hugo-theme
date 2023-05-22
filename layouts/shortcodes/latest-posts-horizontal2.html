@@ -1,7 +1,9 @@
-{{ $paginate := .Site.Params.Paginate | default 10 }}
-{{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
+
 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-16">
-{{range (where .Site.RegularPages "Type" "posts") | first 5 }}
+{{ $paginate := .Site.Params.Paginate | default 10 }}
+{{ $count := .Get "count" | default 3 }}
+{{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
+{{ range (where .Site.RegularPages "Type" "posts") | first $count }}
   <section class="dark:py-8 space-y-2 dark:bg-inherit">
     {{ partial "plugin/categories.html" . }}
     <h2>

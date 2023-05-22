@@ -1,9 +1,18 @@
 {{ define "main" }}
-{{ partial "plugin/breadcrumbs" . }}
-<div class="text-center">
-</div>
-<div>
+  {{ partial "plugin/breadcrumbs" . }}
+
+  <div>
+    {{ if .Params.listAllPosts | default true }}
+    <ul>
+        {{ $paginate := .Site.Params.Paginate }}
+        {{ $date_format := .Site.Params.Date_Format }}
+        {{ range .Paginator.Pages }}
+        <li>{{ .Date.Format $date_format }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ template "_internal/pagination.html" . }}
+    {{ end }}
+
     {{ .Content }}
-    {{ partial "post-list.html" . }}
-</div>
+  </div>
 {{ end }}

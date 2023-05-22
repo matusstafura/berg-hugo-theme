@@ -1,6 +1,7 @@
 <section>
+{{ $count := .Get "count" | default 3 }}
 {{ $date_format := .Site.Params.Date_Format }}
-{{range (where .Site.RegularPages "Type" "posts") | first 5 }}
+{{ range .Paginator.Pages.ByDate.Reverse | first $count }}
     <div>
         <a href="{{.Permalink}}" title="{{.Title}}">{{.Title}}</a>
         {{ $date_format := .Site.Params.date_format }}

@@ -1,6 +1,6 @@
-{{ $paginate := .Site.Params.Paginate | default 10 }}
 {{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
-{{range (where .Site.RegularPages "Type" "posts") | first 5 }}
+{{ $count := .Get "count" | default 3 }}
+{{ range (where .Site.RegularPages "Type" "posts") | first $count }}
   <section
     class="p-8 shadow border dark:py-8 space-y-2 bg-white dark:bg-inherit">
     <h2 class="m-0">
