@@ -1,24 +1,18 @@
 <head>
-    {{ partial "head/first.html" . }}
-    <title>{{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }} - {{ .Site.BaseURL}}</title>
-    <meta name="title" content="{{- .Title }} - {{ .Site.Title -}}">
-    <meta name="description" content="{{- .Description | default .Site.Params.Description -}}">
+{{- partial "head/first.html" . }}
+<title>{{- .Title }} - {{ replaceRE "^https?://(?:www\\.)?(.*)/$" "$1" .Site.BaseURL }}</title>
+<meta name="title" content="{{- .Title }} - {{ .Site.Title -}}">
+<meta name="description" content="{{- .Description | default .Site.Params.Description -}}">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="{{ .Permalink }}" />
+<!-- Favicon -->
+{{- if .Site.Params.favicon -}}<link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" type="image/x-icon">{{ end }}
 
-    <!-- View Type -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
 
-    <link rel="canonical" href="{{ .Permalink }}" />
-
-    <!-- Favicon -->
-    {{ if .Site.Params.favicon }}
-    <link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" type="image/x-icon">
-    {{ end }}
-
-    {{ template "_internal/opengraph.html" . }}
-    {{ template "_internal/twitter_cards.html" . }}
-
-    {{ partial "head/seo.html" . }}
-    {{ partial "head/link.html" . }}
+{{- partial "head/seo.html" . -}}
+{{- partial "head/link.html" . -}}
 </head>
