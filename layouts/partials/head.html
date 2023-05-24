@@ -1,7 +1,6 @@
 <head>
 {{- partial "head/first.html" . }}
-<title>{{- .Title }} - {{ replaceRE "^https?://(?:www\\.)?(.*)/$" "$1" .Site.BaseURL }}</title>
-<meta name="title" content="{{- .Title }} - {{ .Site.Title -}}">
+<title>{{- .Title }}</title>
 <meta name="description" content="{{- .Description | default .Site.Params.Description -}}">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
