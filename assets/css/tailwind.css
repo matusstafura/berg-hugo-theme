@@ -20,7 +20,6 @@ body {
 }
 
 /* shortcode button end */
-
 #credits a {
     @apply text-xs block text-primary-500;
 }

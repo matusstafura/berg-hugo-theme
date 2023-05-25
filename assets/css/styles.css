@@ -1391,6 +1391,12 @@ p {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1597,6 +1603,10 @@ p {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .tracking-tight {
