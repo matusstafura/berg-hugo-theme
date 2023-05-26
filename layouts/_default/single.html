@@ -22,9 +22,16 @@
 </div>
 {{ end }}
 
+<div class="md:flex">
+{{ if .Params.toc }}
+<div class="w-[48rem]">
+    {{ partial "toc.html" . }}
+</div>
+{{ end }}
 <article>  
     {{ .Content }}
 </article>
+</div>
 
 {{ partial "plugin/prevnext" . }}
 

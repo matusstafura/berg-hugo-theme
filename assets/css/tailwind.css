@@ -92,4 +92,12 @@ p {
     @apply text-[1.05rem] leading-relaxed text-slate-700 antialiased dark:text-gray-100;
 }
 
+.toc {
+    @apply sticky top-10 mt-4 mr-4;
+}
+
+.toc ul {
+    @apply list-none -ml-8 leading-6;
+}
+
 @tailwind utilities;
