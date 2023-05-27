@@ -13,10 +13,10 @@
     <div>
       {{ $banner := resources.Get .Params.featuredImage }}
 
-      {{ $tiny := ($banner.Fill "480x280 q90") }}
-      {{ $small := ($banner.Fill "768x280 q90") }}
-      {{ $medium := ($banner.Fill "1024x280 q90") }}
-      {{ $large := ($banner.Fill "1366x280 q90") }}
+      {{ $tiny := ($banner.Fill "480x460 q90") }}
+      {{ $small := ($banner.Fill "900x675 q90") }}
+      {{ $large := ($banner.Fill "1366x1024 q90") }}
+      {{ $medium := ($banner.Fill "1024x768 q90") }}
 
       <a href="{{ .Permalink }}">
         <picture>
