@@ -11,13 +11,22 @@
     </h2>
     {{ if .Params.featuredImage }}
     <div>
+      {{ $banner := resources.Get .Params.featuredImage }}
+
+      {{ $tiny := ($banner.Fill "480x280 q90") }}
+      {{ $small := ($banner.Fill "768x280 q90") }}
+      {{ $medium := ($banner.Fill "1024x280 q90") }}
+      {{ $large := ($banner.Fill "1366x280 q90") }}
+
       <a href="{{ .Permalink }}">
         <picture>
-          <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}?width=464" alt="{{ .Title }}" />
-          <img src="{{ .Params.featuredImage }}?width=464" alt="{{ .Title }}" width="464" loading="lazy" decoding="async" />
+          <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
+          <source type="image/jpeg" srcset="{{ $tiny.RelPermalink }} 480w, {{ $small.RelPermalink }} 768w, {{ $medium.RelPermalink }} 1024w, {{ $large.RelPermalink }} 1366w" alt="{{ .Title }}" />
+          <img src="{{ $banner.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="280">
         </picture>
       </a>
     </div>
+
     {{ end }}
     <div class="">
         {{ .Params.Description }}
