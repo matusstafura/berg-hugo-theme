@@ -13,8 +13,8 @@
     <div>
       <a href="{{ .Permalink }}">
         <picture>
-          <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
-          <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" decoding="async" />
+          <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}?width=464" alt="{{ .Title }}" />
+          <img src="{{ .Params.featuredImage }}?width=464" alt="{{ .Title }}" width="464" loading="lazy" decoding="async" />
         </picture>
       </a>
     </div>
