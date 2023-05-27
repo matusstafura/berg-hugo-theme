@@ -1,8 +1,7 @@
 {{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
 {{ $count := .Get "count" | default 3 }}
 {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
-  <section
-    class="p-8 shadow border dark:py-8 space-y-2 bg-white dark:bg-inherit">
+  <section class="p-8 shadow border dark:border-none dark:py-8 space-y-2 bg-white dark:bg-inherit">
     <h2 class="m-0">
         <a href="{{ .Permalink }}" class="text-2xl font-semibold tracking-wide hover:text-primary-400" > {{ .Title }} </a >
     </h2>
