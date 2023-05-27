@@ -2,7 +2,8 @@
 {{ $isPNG := eq (path.Ext .Destination) ".png" }}
 
 {{ if or $isJPG $isPNG -}}
-  <figure>
+<figure>
+  <picture>
     {{ if ($isJPG) -}}
       {{ $avifPath := replace .Destination ".jpg" ".avif" }}
       {{ $avifPathStatic := printf "static/%s" $avifPath }}
@@ -49,5 +50,6 @@
     {{ with .Title }}
       <figcaption>{{ . }}</figcaption>
     {{ end }}
-  </figure>
+  </picture>
+</figure>
 {{ end }}

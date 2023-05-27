@@ -15,10 +15,12 @@
       {{ if .Params.featuredImage }}
       <div class="w-1/4">
         <a href="{{ .Permalink }}">
-          <picture>
-            <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
-            <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" decoding="async" />
-          </picture>
+          <figure>
+            <picture>
+              <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
+              <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" decoding="async" />
+            </picture>
+          </figure>
         </a>
       </div>
       <div class="w-3/4">
