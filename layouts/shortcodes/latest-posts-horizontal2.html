@@ -11,7 +11,12 @@
     </h2>
     {{ if .Params.featuredImage }}
     <div>
-      <a href="{{ .Permalink }}"><img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" /></a>
+      <a href="{{ .Permalink }}">
+        <picture>
+          <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
+          <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" decoding="async" />
+        </picture>
+      </a>
     </div>
     {{ end }}
     <div class="">

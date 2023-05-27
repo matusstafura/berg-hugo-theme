@@ -4,7 +4,7 @@
   {{ range .feature_item }}
   <div class="md:flex block mb-2 bg-white dark:bg-gray-800 rounded shadow space-x-8">
     <div class="md:w-1/2">
-      <img src="{{ .image }}" alt="{{ .title }}" class="m-0 rounded-l" />
+      <img src="{{ .image }}" alt="{{ .title }}" class="m-0 rounded-l" loading="lazy" decoding="async"  />
     </div>
     <div class="md:w-1/2 pb-8">
       <h3>{{ .title }}</h3>

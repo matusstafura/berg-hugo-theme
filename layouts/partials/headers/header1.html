@@ -11,7 +11,7 @@
         <div class="flex items-center space-x-4">
             {{ if .Site.Params.logo }} 
                 <a href="{{ .Site.BaseURL }}"> 
-                    <img class="h-8" src="{{ .Site.Params.logo }}" alt="Logo">
+                    <img class="h-8" src="{{ .Site.Params.logo }}" alt="Logo" loading="lazy" decoding="async" />
                 </a>
             {{ end }}
             <a href="{{ .Site.BaseURL }}"> 
@@ -67,7 +67,7 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         {{ if .Params.icon }}
         <div>
-            <img src="{{ .Params.icon }}" alt="{{ .Title }}" class="mx-auto h-16 w-auto">
+            <img src="{{ .Params.icon }}" alt="{{ .Title }}" class="mx-auto h-16 w-auto" loading="lazy" decoding="async" />
         </div>
         {{ end }}
         <div class="mx-auto flex justify-center text-primary-50">

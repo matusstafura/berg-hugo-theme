@@ -11,4 +11,4 @@
 {{- $assets.Add "css" (slice $cssCustom) }}
 {{- end }}
 {{- $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
-<link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink | absLangURL }}" integrity="{{ $bundleCSS.Data.Integrity }}" />
+<link rel="stylesheet" type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink | absLangURL }}" integrity="{{ $bundleCSS.Data.Integrity }}" />
