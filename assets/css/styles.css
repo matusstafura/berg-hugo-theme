@@ -1147,6 +1147,7 @@ p {
   top: 2.5rem;
   margin-top: 1rem;
   margin-right: 1rem;
+  width: 16rem;
   border-right-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
@@ -1884,10 +1885,6 @@ p {
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:w-\[48rem\] {
-    width: 48rem;
   }
 
   .md\:grid-cols-2 {
