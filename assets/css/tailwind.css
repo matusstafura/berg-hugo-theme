@@ -93,11 +93,11 @@ p {
 }
 
 .toc {
-    @apply sticky top-10 mt-4 mr-4 border-r-2 border-gray-100 text-[0.95rem];
+    @apply sticky top-10 mt-4 mr-4 border-r-2 border-gray-100 lg:text-[0.9rem];
 }
 
 .toc ul {
-    @apply list-none -ml-7 leading-6;
+    @apply list-none -ml-8;
 }
 
 @tailwind utilities;
