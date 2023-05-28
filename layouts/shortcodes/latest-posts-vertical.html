@@ -4,7 +4,7 @@
     {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
     <div class="rounded-xl space-y-4">
         <a href="{{ .Permalink }}">
-            <<figure>
+            <figure>
                 <picture>
                   <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
                   <img src="{{ .Params.featuredImage }}" class="object-fill rounded-xl shadow w-full" alt="{{ .Title }}" width="100%" height="100%" loading="lazy" decoding="async" />
@@ -31,9 +31,9 @@
                 <p class="text-xs text-slate-400">{{ .Date.Format $date_format }}</p>
             </div>
             {{ end }}
-            <h1 class="font-bold text-xl hover:text-primary-500 dark:text-gray-200">
+            <h2 class="font-bold hover:text-primary-500 dark:text-gray-200">
                 <a href="{{ .Permalink }}" title={{ .Title }}>{{ .Title }}</a>
-            </h1>
+            </h2>
             <div>
                 {{ range .Params.Tags }}
                     <a href="/tags/{{. | urlize}}" class="inline-block space-x-3 py-1 text-xs hover:underline">#{{ . }}</a>

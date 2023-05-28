@@ -41,9 +41,8 @@ figcaption {
     @apply text-secondary-500;
 }
 
-.prose h2 {
-    font-size: 2rem;
-    @apply font-bold;
+h2 {
+    @apply font-bold text-3xl;
 }
 
 @font-face {
@@ -98,6 +97,10 @@ p {
 
 .toc ul {
     @apply list-none -ml-8;
+}
+
+.sidebar-right {
+    @apply sticky top-10 w-64 mt-4 ml-4;
 }
 
 @tailwind utilities;
