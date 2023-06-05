@@ -18,7 +18,7 @@
           <figure>
             <picture>
               <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
-              <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" decoding="async" />
+              <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" width="100%" height="100%" decoding="async" />
             </picture>
           </figure>
         </a>
