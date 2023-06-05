@@ -14,4 +14,9 @@
 
 {{- partial "head/seo.html" . -}}
 {{- partial "head/link.html" . -}}
+
+{{ if eq .Type "posts" }}
+{{- partial "markup/blogposting.html" . -}}
+{{ end }}
+
 </head>
