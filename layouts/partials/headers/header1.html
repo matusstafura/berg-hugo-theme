@@ -15,7 +15,7 @@
                 </a>
             {{ end }}
             <a href="{{ .Site.BaseURL }}"> 
-                <div class="m-auto text-xl text-primary-50 font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
+                <div class="m-auto text-xl text-white font-semibold dark:text-slate-100">{{ .Site.Title }}</div>
             </a>
         </div>
 
@@ -23,7 +23,7 @@
             <div class="hidden ml-auto lg:flex">
                 <div class="flex space-x-8 font-semibold text-slate-700 dark:text-slate-100">
                     {{ range .Site.Menus.main }}
-                    <a href="{{ .URL | absLangURL }}" class="text-primary-50 hover:text-secondary-500">{{ .Name }}</a>
+                    <a href="{{ .URL | absLangURL }}" class="text-white hover:text-secondary-500">{{ .Name }}</a>
                     {{ end }}
                 </div>
             </div>
@@ -76,10 +76,10 @@
         {{ if or .Title .Description }}
         <div class="mx-auto max-w-2xl py-8 space-y-2">
             {{ if .Title }}
-            <h1 class="text-5xl text-center pb-4 text-primary-50 font-extrabold">{{ .Title }}</h1>
+            <h1 class="text-5xl text-center pb-4 text-white font-extrabold">{{ .Title }}</h1>
             {{ end }}
             {{ if .Description }}
-            <p class="text-xl text-center text-primary-50 font-extrabold">{{ .Description }}</p>
+            <p class="text-xl text-center text-white font-extrabold">{{ .Description }}</p>
             {{ end }}
             {{ if .Params.showLastUpdate }}
             <p class="text-sm text-center text-neutral-50">{{ i18n "last_update" }}: {{ .Lastmod.Format "2006-01-02" }}</p>
