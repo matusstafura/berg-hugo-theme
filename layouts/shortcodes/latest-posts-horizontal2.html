@@ -11,14 +11,19 @@
     </h2>
     {{ if .Params.featuredImage }}
     <div>
+    {{ $banner := resources.Get .Params.featuredImage }}
 
-      <a href="{{ .Permalink }}">
-        <picture>
-          <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
-          <img src="{{ .Params.featuredImage }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="460">
-        </picture>
-      </a>
-    </div>
+    {{ $tiny := ($banner.Fill "464x309 q90") }}
+    {{ $small := ($banner.Fill "900x675 q90") }}
+
+    <a href="{{ .Permalink }}">
+      <picture>
+        <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
+        <source type="image/jpeg" srcset="{{ $tiny.RelPermalink }} 480w, {{ $small.RelPermalink }} 900w" alt="{{ .Title }}" />
+        <img src="{{ $banner.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="309">
+      </picture>
+    </a>
+  </div>
 
     {{ end }}
     <div>
