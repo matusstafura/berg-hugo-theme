@@ -6,6 +6,7 @@ themesDir = '../..'
 
 [params]
   logo = '/images/logo.svg'
+  header = 'header1'
   favicon = '/images/logo.svg'
   description = 'A documentation for a simple, clean, and responsive Hugo theme.'
   date_format = 'January 2, 2006'

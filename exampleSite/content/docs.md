@@ -17,7 +17,7 @@ hugo new site quickstart
 cd quickstart
 git init
 git submodule add https://github.com/matusstafura/berg-hugo-theme themes/berg
-echo "theme = 'berg'" >> config.toml
+echo "theme = 'berg'" >> hugo.toml
 ```
 
 and to start the server, run:
@@ -90,7 +90,7 @@ toc: true
 
 This configuration tells Hugo to generate a table of contents for that specific content file.
 
-2. Configure additional options: To further customize the table of contents generation, you can modify the `config.toml` file or the relevant configuration section in your Hugo project. Add the following code to the configuration:
+2. Configure additional options: To further customize the table of contents generation, you can modify the `hugo.toml` file or the relevant configuration section in your Hugo project. Add the following code to the configuration:
 
 ```toml
 [markup]
@@ -104,11 +104,11 @@ The `startLevel` and `endLevel` settings define the range of headings to include
 
 The `ordered` option controls whether the table of contents will be ordered or unordered. Set it to `true` for an ordered list or `false` for an unordered list.
 
-By adding the front matter configuration and modifying the `config.toml` file, you can automatically generate a table of contents for your Hugo content files based on the specified heading levels.
+By adding the front matter configuration and modifying the `hugo.toml` file, you can automatically generate a table of contents for your Hugo content files based on the specified heading levels.
 
 ## Settings
 
-To change settings, edit file config.toml.
+To change settings, edit file hugo.toml.
 
 ```toml
 

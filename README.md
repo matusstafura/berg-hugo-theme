@@ -32,7 +32,7 @@ hugo new site quickstart
 cd quickstart
 git init
 git submodule add https://github.com/matusstafura/berg-hugo-theme themes/berg
-echo "theme = 'berg'" >> config.toml
+echo "theme = 'berg'" >> hugo.toml
 hugo server
 ```
 
