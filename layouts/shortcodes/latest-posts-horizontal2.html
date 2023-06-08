@@ -1,4 +1,3 @@
-
 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-16">
 {{ $paginate := .Site.Params.Paginate | default 10 }}
 {{ $count := .Get "count" | default 3 }}
@@ -13,14 +12,14 @@
     <div>
     {{ $banner := resources.Get .Params.featuredImage }}
 
-    {{ $tiny := ($banner.Fill "464x309 q90") }}
-    {{ $small := ($banner.Fill "900x675 q90") }}
+    {{ $jpg := ($banner.Fill "464x309 q90 jpg") }}
+    {{ $webp := ($banner.Fill "464x309 q90 webp") }}
 
     <a href="{{ .Permalink }}">
       <picture>
-        <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
-        <source type="image/jpeg" srcset="{{ $tiny.RelPermalink }} 480w, {{ $small.RelPermalink }} 900w" alt="{{ .Title }}" />
-        <img src="{{ $banner.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="309">
+        <source type="image/webp" srcset="{{ $webp.RelPermalink }}" alt="{{ .Title }}" />
+        <source type="image/jpeg" srcset="{{ $jpg.RelPermalink }} 480w" alt="{{ .Title }}" />
+        <img src="{{ $jpg.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="309">
       </picture>
     </a>
   </div>
