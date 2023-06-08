@@ -1,8 +1,12 @@
-{{ $js := resources.Get "./js/scripts.js" }}
-<script src="{{ $js.RelPermalink }}"></script>
+{{- $assets := newScratch }}
 
-{{ range .Site.Params.custom_js }}
-    {{ $custom := resources.Get . }}
-    <script src="{{ $custom.RelPermalink }}"></script>
-{{ end }}
+{{- $js := resources.Get "./js/scripts.js" | minify | fingerprint }}
+{{- $assets.Add "js" (slice $js) }}
 
+{{- range .Site.Params.custom_js }}
+    {{- $custom := resources.Get . | minify | fingerprint }}
+    {{- $assets.Add "js" (slice $custom) }}
+{{- end }}
+
+{{- $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script src="{{ $bundleJS.RelPermalink }}"></script>
