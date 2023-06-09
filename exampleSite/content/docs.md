@@ -328,6 +328,8 @@ and then in markdown
 {{</* faq */>}}
 ```
 
+Note: it also automaticall ads FAQPage markup schema.
+
 ## Languages
 
 To make site multilingual, see https://gohugo.io/content-management/multilingual/.
