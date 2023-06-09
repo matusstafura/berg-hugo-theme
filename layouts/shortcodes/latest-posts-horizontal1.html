@@ -1,39 +1,47 @@
 {{ $date_format := .Site.Params.Date_Format | default "Jan 2, 2006" }}
 {{ $count := .Get "count" | default 3 }}
+<div class="space-y-8 gap-x-16">
 {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
-  <section class="p-8 shadow border dark:border-none dark:py-8 space-y-2 bg-white dark:bg-inherit">
+  <section class="px-8 py-4 shadow border dark:border-none dark:shadow-none dark:p-0 dark:py-8 bg-white dark:bg-inherit">
+    <a href="{{ .Permalink }}">
     <h2 class="m-0">
         <a href="{{ .Permalink }}" class="text-2xl font-semibold tracking-wide hover:text-primary-400" > {{ .Title }} </a >
     </h2>
+        </a>
     <div class="text-sm">
-      <span class="flex mb-2 font-bold tracking-tight text-gray-500 dark:text-gray-300" >{{ .Params.Author }}</span >
+      <span class="flex tracking-tight text-gray-500 dark:text-gray-300" >{{ .Params.Author }}</span >
       {{ if .Site.Params.Posts.showDate }}
         <span class="text-gray-500 text-md dark:text-gray-300" >{{ .Date.Format $date_format  }}</span >
       {{ end }}
     </div>
-    <div class="flex flex-row space-4 gap-x-4 items-center justify-between">
+    <div class="flex gap-x-8 items-center justify-between">
       {{ if .Params.featuredImage }}
-      <div class="w-1/4">
+      <div class="w-full">
+        {{ $banner := resources.Get .Params.featuredImage }}
+
+        {{ $jpg := ($banner.Fill "464x261 q90 jpg") }}
+        {{ $webp := ($banner.Fill "464x261 q90 webp") }}
+
         <a href="{{ .Permalink }}">
           <figure>
-            <picture>
-              <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
-              <img src="{{ .Params.featuredImage }}" class="w-full bg-black" alt="{{ .Title }}" loading="lazy" width="100%" height="100%" decoding="async" />
-            </picture>
+          <picture>
+            <source type="image/webp" srcset="{{ $webp.RelPermalink }}" alt="{{ .Title }}" />
+            <source type="image/jpeg" srcset="{{ $jpg.RelPermalink }} 480w" alt="{{ .Title }}" />
+            <img src="{{ $jpg.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="261">
+          </picture>
           </figure>
         </a>
       </div>
-      <div class="w-3/4">
-        <div class="text-gray-500 dark:text-gray-200">
-        {{ .Params.Description }}
-      </div>
+        <div class="w-full">
+          {{ .Summary }}
+          <a href="{{ .Permalink }}" class="block text-neutral-500">Read more</a>
+        </div>
       {{ else }}
-      <div>
-        <div class="text-gray-500 dark:text-gray-200">
-        {{ .Params.Description }}
-      </div>
+        <div class="text-gray-500 w-full dark:text-gray-200">
+          {{ .Summary }}
+        </div>
       {{ end }}
-    </div>
   </div>
   </section>
   {{ end }}
+  </div>
