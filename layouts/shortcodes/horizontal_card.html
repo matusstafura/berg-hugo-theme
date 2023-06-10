@@ -1,18 +1,27 @@
 {{ with .Page.Params.horizontal_card }}
 {{ if .enable }}
-<section class="space-y-4">
+<section class="space-y-8">
   {{ range .feature_item }}
-  <div class="md:flex block mb-2 bg-white dark:bg-gray-800 rounded shadow space-x-8">
-    <div class="md:w-1/2">
-      <img src="{{ .image }}" alt="{{ .title }}" class="m-0 rounded-l" width="100%" height="100%" loading="lazy" decoding="async"  />
+  <div class="md:flex bg-white dark:bg-gray-800 rounded shadow space-x-8">
+    {{ $banner := resources.Get .image }}
+
+    {{ $jpg := ($banner.Fill "480x270 q90 jpg") }}
+    {{ $webp := ($banner.Fill "480x270 q90 webp") }}
+
+    <div>
+      <picture>
+        <source type="image/webp" srcset="{{ $webp.RelPermalink }}" alt="{{ .Title }}" />
+        <source type="image/jpeg" srcset="{{ $jpg.RelPermalink }} 480w" alt="{{ .Title }}" />
+        <img src="{{ $jpg.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="480" height="270" class="m-0">
+      </picture>
     </div>
-    <div class="md:w-1/2 pb-8">
+    <div>
       <h3>{{ .title }}</h3>
       <div class="text-slate-500 dark:text-gray-100 pb-4">{{ .description }}</div>
-      <div>
+      <div class="pb-8">
         {{ if .link }}<a href="{{ .link }}" class="px-6 no-underline py-3 bg-primary-50 rounded shadow-md text-primary-50 hover:text-primary-600 hover:bg-primary-50 dark:bg-secondary-600 dark:hover:bg-primary-800">
           {{ .button | default "Read more ..."}}</a>{{ end }}
-      </div>
+        </div>
     </div>
   </div>
   {{ end }}

@@ -3,6 +3,6 @@
 {{- range $index, $faq := $faqData -}}
 <div class="faq">
     <span class="font-bold">{{ $faq.question }}</span>
-    <p class="text-sm">{{ $faq.answer }}</p>
+    <p>{{ $faq.answer }}</p>
 </div>
 {{- end -}}

@@ -1231,6 +1231,14 @@ p {
   margin-top: 2rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1283,14 +1291,6 @@ p {
   width: 50%;
 }
 
-.w-1\/4 {
-  width: 25%;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-48 {
   width: 12rem;
 }
@@ -1305,18 +1305,6 @@ p {
 
 .w-full {
   width: 100%;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-\[464\] {
-  width: 464;
-}
-
-.w-\[464px\] {
-  width: 464px;
 }
 
 .max-w-2xl {
@@ -1339,8 +1327,8 @@ p {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .items-center {
@@ -1359,22 +1347,9 @@ p {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-x-16 {
   -moz-column-gap: 4rem;
        column-gap: 4rem;
-}
-
-.gap-x-4 {
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
 }
 
 .gap-x-8 {
@@ -1388,6 +1363,10 @@ p {
 
 .gap-y-8 {
   row-gap: 2rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1494,6 +1473,10 @@ p {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-primary-100 {
+  background-color: var(--color-primary-100);
+}
+
 .bg-primary-200 {
   background-color: var(--color-primary-200);
 }
@@ -1509,10 +1492,6 @@ p {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-primary-100 {
-  background-color: var(--color-primary-100);
 }
 
 .bg-gradient-to-b {
@@ -1558,6 +1537,10 @@ p {
   padding: 2rem;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1566,6 +1549,11 @@ p {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-1 {
@@ -1591,11 +1579,6 @@ p {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pb-4 {
@@ -1827,33 +1810,6 @@ p {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-primary-100 {
-  background-color: var(--color-primary-100);
-}
-
-.dark .dark\:bg-primary-500 {
-  background-color: var(--color-primary-500);
-}
-
-.dark .dark\:bg-primary-800 {
-  background-color: var(--color-primary-800);
-}
-
-.dark .dark\:bg-neutral-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-neutral-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-neutral-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 82 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:from-slate-700 {
   --tw-gradient-from: #334155;
   --tw-gradient-to: rgb(51 65 85 / 0);
@@ -1937,6 +1893,14 @@ p {
 }
 
 @media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1962,6 +1926,16 @@ p {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .md\:text-\[0\.9rem\] {
@@ -1992,41 +1966,12 @@ p {
     border-right-width: 2px;
   }
 
-  .lg\:border-gray-100 {
-    --tw-border-opacity: 1;
-    border-color: rgb(243 244 246 / var(--tw-border-opacity));
-  }
-
-  .lg\:border-primary-800 {
-    border-color: var(--color-primary-800);
-  }
-
-  .lg\:border-primary-300 {
-    border-color: var(--color-primary-300);
-  }
-
   .lg\:border-primary-100 {
     border-color: var(--color-primary-100);
   }
 
-  .lg\:bg-primary-100 {
-    background-color: var(--color-primary-100);
-  }
-
-  .lg\:bg-primary-50 {
-    background-color: var(--color-primary-50);
-  }
-
   .lg\:bg-inherit {
     background-color: inherit;
-  }
-
-  .lg\:bg-none {
-    background-image: none;
-  }
-
-  .lg\:p-2 {
-    padding: 0.5rem;
   }
 
   .lg\:p-0 {
@@ -2044,6 +1989,10 @@ p {
 }
 
 @media (min-width: 1280px) {
+  .xl\:flex {
+    display: flex;
+  }
+
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

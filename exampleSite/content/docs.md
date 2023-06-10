@@ -268,6 +268,20 @@ Just add the code to your markdown file.
 Creates a horizontal card. In markdown call shortcode and add info in 
 
 ```md
+horizontal_card:
+  enable: true
+  feature_item:
+    - title: "title 1"
+      description: "description"
+      image: "/images/first.jpg"
+      link: "https://berg.stafura.dev/"
+    - title: "title 2"
+      description: "descriptiojn"
+      image: "/images/second.jpg"
+      link: "https://www.example.com/"
+```
+
+```md
 {{</* horizontal_card */>}}
 
 - ### Button

@@ -12,14 +12,14 @@
     <div>
     {{ $banner := resources.Get .Params.featuredImage }}
 
-    {{ $jpg := ($banner.Fill "464x261 q90 jpg") }}
-    {{ $webp := ($banner.Fill "464x261 q90 webp") }}
+    {{ $jpg := ($banner.Fill "480x270 q90 jpg") }}
+    {{ $webp := ($banner.Fill "480x270 q90 webp") }}
 
     <a href="{{ .Permalink }}">
       <picture>
         <source type="image/webp" srcset="{{ $webp.RelPermalink }}" alt="{{ .Title }}" />
         <source type="image/jpeg" srcset="{{ $jpg.RelPermalink }} 480w" alt="{{ .Title }}" />
-        <img src="{{ $jpg.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="464" height="261">
+        <img src="{{ $jpg.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="480" height="270">
       </picture>
     </a>
   </div>
