@@ -7,18 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="{{ .Permalink }}" />
 <!-- Favicon -->
-{{- if .Site.Params.favicon -}}<link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" type="image/x-icon">{{ end }}
-
+{{- if .Site.Params.favicon -}}
+<link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" type="image/x-icon">
+{{ end -}}
 {{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
-
+{{- template "_internal/twitter_cards.html" . }}
 {{- partial "head/seo.html" . -}}
 {{- partial "head/link.html" . -}}
-
 {{- partial "faq.html" . -}}
-
 {{ if eq .Type "posts" }}
 {{- partial "markup/blogposting.html" . -}}
-{{ end }}
-
+{{ end -}}
 </head>

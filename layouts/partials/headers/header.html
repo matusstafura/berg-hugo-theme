@@ -24,7 +24,7 @@
             <div class="hidden ml-auto md:flex">
                 <div class="flex space-x-8 font-semibold text-slate-700 dark:text-slate-100">
                     {{ range .Site.Menus.main }}
-                    <a href="{{ .URL | absLangURL }}" class="hover:text-primary-500">{{ .Name }}</a>
+                    <a href="{{ .URL }}" class="hover:text-primary-500">{{ .Name }}</a>
                     {{ end }}
                 </div>
             </div>
