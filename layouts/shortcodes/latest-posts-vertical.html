@@ -6,7 +6,12 @@
         <a href="{{ .Permalink }}">
             <figure>
                 <picture>
-                  <source type="image/webp" srcset="{{ replaceRE ".jpg" ".webp" .Params.featuredImage }}" alt="{{ .Title }}" />
+                    {{ $webpFilePath := replaceRE ".jpg" ".webp" .Params.featuredImage }}
+                    {{ $webpFileExists := fileExists $webpFilePath }}
+
+                    {{ if $webpFileExists }}
+                        <source type="image/webp" srcset="{{ $webpFilePath }}" alt="{{ .Title }}" />
+                    {{ end }}
                   <img src="{{ .Params.featuredImage }}" class="object-fill rounded-xl shadow w-full" alt="{{ .Title }}" width="100%" height="100%" loading="lazy" decoding="async" />
                 </picture>
             </figure>
