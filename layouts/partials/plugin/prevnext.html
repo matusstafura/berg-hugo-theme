@@ -2,13 +2,13 @@
 <div class="flex justify-between pb-4">
     <div>
         {{ if .NextInSection  }}
-        <a href="{{ .NextPage.Permalink }}">« {{ .NextPage.Title | truncate 50 "..." }}</a>
+        <a href="{{ .Next.Permalink }}">« {{ .Next.Title | truncate 50 "..." }}</a>
         {{ end }}
     </div>
 
     <div>
         {{ if .PrevInSection }}
-        <a href="{{ .PrevPage.Permalink }}">{{ .PrevPage.Title | truncate 50 "..."}} »</a>
+        <a href="{{ .Prev.Permalink }}">{{ .Prev.Title | truncate 50 "..."}} »</a>
         {{ end }}
     </div>
 </div>
