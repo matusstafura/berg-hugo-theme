@@ -24,6 +24,7 @@ Berg theme is a clean and modern responsive blog theme for Hugo with TailwindCSS
 - WebP Support
 - Auto Table Of Contents
 - Google FAQ Schema 
+- Creedly Badges
 
 ## Documentation
 

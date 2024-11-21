@@ -7,6 +7,11 @@ draft: false
 tags: ["go", "golang"]
 categories: ["programming"]
 featuredImage: /images/blog/go.jpg
+questions:
+  - question: "Question 1"
+    answer: "This is the answer to Question 1."
+  - question: "Question 2"
+    answer: "Here's the answer to Question 2."
 ---
 
 Go is a statically typed, concurrent, garbage-collected programming language developed at Google in 2007. It was designed with the goal of providing a fast, efficient and reliable language for large-scale networked and distributed systems. Go has quickly become one of the most popular programming languages, especially in the cloud and systems software domains, due to its simplicity, concurrency support, and high performance.
@@ -42,3 +47,5 @@ Here are some tips to help you effectively study and learn Go:
 Go also provides a powerful standard library that includes a wide range of functionality, from HTTP handling to cryptographic algorithms. **This standard library is a major selling point for Go**, as it reduces the amount of time and effort required to get started with a new project, and makes it easier to write code that is both efficient and reliable.
 
 In conclusion, Go is a modern programming language that is well-suited for developing large-scale networked and distributed systems. Its simplicity, concurrency support, and powerful standard library make it an attractive option for developers looking for a fast, efficient, and reliable language. With its growing popularity, it's clear that Go is here to stay, and it's likely that we'll continue to see it being used in a wide range of applications in the coming years.
+
+{{< faq >}}

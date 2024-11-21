@@ -253,6 +253,7 @@ Just add the code to your markdown file.
 
 - ### Latest posts vertical
 
+
 ```md
 {{</* latest-posts-vertical */>}}
 ```
@@ -340,6 +341,14 @@ and then in markdown
 
 ```md
 {{</* faq */>}}
+```
+
+### Creedly
+
+Add Credly badge to your site.
+
+```md
+{{</* creedly badgeId="put your badge Id here" */>}}
 ```
 
 Note: it also automaticall ads FAQPage markup schema.
