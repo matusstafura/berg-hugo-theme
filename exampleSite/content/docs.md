@@ -343,6 +343,8 @@ and then in markdown
 {{</* faq */>}}
 ```
 
+Note: it also automaticall ads FAQPage markup schema.
+
 ### Creedly
 
 Add Credly badge to your site.
@@ -351,7 +353,13 @@ Add Credly badge to your site.
 {{</* creedly badgeId="put your badge Id here" */>}}
 ```
 
-Note: it also automaticall ads FAQPage markup schema.
+### MailJet Subscription form
+
+Add MailJet subscription form to your site.
+
+```md
+{{</* mailjet src="https://url-of-your-form" */>}}
+```
 
 ## Languages
 
