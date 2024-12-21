@@ -9,6 +9,13 @@ theme = 'berg'
 googleAnalytics = ""
 
 # Site settings
+
+[pagination]
+  # Enter number of posts to display per page.
+  # Should be an unsigned integer.
+  # default is 10
+  pagerSize = 10
+
 [params]
 
   # Upload your logo to the `static` folder
@@ -21,10 +28,6 @@ googleAnalytics = ""
   # Example: "/images/favicon.ico"
   favicon = ""
 
-  # Enter number of posts to display per page.
-  # Should be an unsigned integer.
-  # default is 10
-  paginate = 10
 
   # Enter how many posts to display in 
   # shortcode latest-posts

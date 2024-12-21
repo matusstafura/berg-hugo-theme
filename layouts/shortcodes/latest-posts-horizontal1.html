@@ -2,7 +2,7 @@
 {{ $count := .Get "count" | default 3 }}
 <div class="space-y-8 gap-x-16">
 {{ range (where .Site.RegularPages "Type" "posts") | first $count }}
-  <section class="px-8 py-4 shadow border dark:border-none dark:shadow-none dark:p-0 dark:py-8 bg-white dark:bg-inherit">
+  <section class="py-0 dark:border-none dark:shadow-none bg-white dark:bg-inherit">
     <h2 class="m-0">
         <a href="{{ .Permalink }}" class="text-2xl font-semibold tracking-wide hover:text-primary-400" > {{ .Title }} </a >
     </h2>
@@ -17,6 +17,7 @@
           {{ .Description }}
         </div>
     </div>
+    <hr class="my-4 dark:border-gray-800">
   </section>
   {{ end }}
   </div>

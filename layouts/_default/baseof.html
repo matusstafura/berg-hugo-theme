@@ -4,7 +4,7 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "body/first.html" . -}}
-        <div class="bg-auto h-full min-h-screen bg-gradient-to-b from-primary-50 to-white dark:from-slate-700 dark:to-slate-600">
+        <div class="bg-auto h-full min-h-screen bg-gradient-to-b dark:from-black dark:to-gray-800">
         {{- $header := .Site.Params.Header | default "header" }}
         {{- partial (printf "headers/%s.html" $header) . -}}
         <div class=" mx-auto xl:p-0 max-w-5xl">
