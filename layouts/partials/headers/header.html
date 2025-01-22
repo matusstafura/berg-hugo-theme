@@ -76,12 +76,12 @@
         </div>
         {{ end }}
         {{ if or .Title .Description }}
-        <div class="mx-auto max-w-2xl py-8">
+        <div class="mx-auto text-center max-w-3xl py-8">
             {{ if .Title }}
-            <h1 class="text-5xl text-center pb-4 text-black dark:text-neutral-50 font-extrabold">{{ .Title }}</h1>
+            <h1 class="text-5xl pb-6 text-black dark:text-neutral-50 font-extrabold">{{ .Title }}</h1>
             {{ end }}
             {{ if .Description }}
-            <p class="text-xl text-center text-black font-extrabold">{{ .Description }}</p>
+            <p class="text-md text-slate-600 font-extrabold">{{ .Description }}</p>
             {{ end }}
         </div>
         {{ end }}

@@ -103,4 +103,8 @@ p {
     @apply sticky top-10 w-64 mt-4 ml-4;
 }
 
+code {
+    text-wrap: auto;
+}
+
 @tailwind utilities;
