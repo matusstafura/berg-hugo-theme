@@ -1,6 +1,6 @@
 <div class="toc lg:w-64 w-full lg:border-r-2 lg:border-primary-100 bg-primary-100 lg:bg-inherit p-8 lg:p-0">
-    <h5>{{ i18n "contents" | default "Contents" }}</h5>
-    <div class="toc-list">
+    <h3 class="font-bold m-0">{{ i18n "contents" | default "Contents" }}</h3>
+    <div class="toc-list pl-0 lg:pl-2">
         {{ .Page.TableOfContents }}
     </div>
 </div>
