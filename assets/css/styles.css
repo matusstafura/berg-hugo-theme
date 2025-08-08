@@ -1275,12 +1275,28 @@ code {
   top: 1rem;
 }
 
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.row-span-full {
+  grid-row: 1 / -1;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
+}
+
 .m-0 {
   margin: 0px;
 }
 
 .m-auto {
   margin: auto;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-auto {
@@ -1293,6 +1309,16 @@ code {
   margin-bottom: 1rem;
 }
 
+.mx-32 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -1303,6 +1329,10 @@ code {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
@@ -1383,6 +1413,10 @@ code {
 
 .w-full {
   width: 100%;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .max-w-2xl {
@@ -1521,6 +1555,19 @@ code {
   border-radius: 0.75rem;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1529,8 +1576,21 @@ code {
   border-top-width: 1px;
 }
 
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-l {
+  border-left-width: 1px;
+}
+
 .border-slate-900\/10 {
   border-color: rgb(15 23 42 / 0.1);
+}
+
+.border-x-current {
+  border-left-color: currentColor;
+  border-right-color: currentColor;
 }
 
 .bg-black {
@@ -1559,12 +1619,33 @@ code {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
+.bg-\[repeating-linear-gradient\(315deg\2c currentColor_0\2c currentColor_1px\2c transparent_0\2c transparent_50\%\)\] {
+  background-image: repeating-linear-gradient(315deg,currentColor 0,currentColor 1px,transparent 0,transparent 50%);
+}
+
+.bg-\[linear-gradient\(135deg\2c _\#ffffff_35\.71\%\2c _\#f5f5f5_35\.71\%\2c _\#f5f5f5_50\%\2c _\#ffffff_50\%\2c _\#ffffff_85\.71\%\2c _\#f5f5f5_85\.71\%\2c _\#f5f5f5_100\%\)\] {
+  background-image: linear-gradient(135deg, #ffffff 35.71%, #f5f5f5 35.71%, #f5f5f5 50%, #ffffff 50%, #ffffff 85.71%, #f5f5f5 85.71%, #f5f5f5 100%);
+}
+
 .bg-auto {
   background-size: auto;
+}
+
+.bg-\[length\:9\.9px_9\.9px\] {
+  background-size: 9.9px 9.9px;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
 
 .fill-black {
@@ -1636,6 +1717,11 @@ code {
   padding-bottom: 2rem;
 }
 
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1648,16 +1734,12 @@ code {
   padding-bottom: 2rem;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
+.pl-0 {
+  padding-left: 0px;
 }
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
 }
 
 .text-center {
@@ -1789,6 +1871,10 @@ code {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-gray-950\/5 {
+  color: rgb(3 7 18 / 0.05);
+}
+
 .no-underline {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -1892,6 +1978,11 @@ code {
   background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:bg-black) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:from-black) {
   --tw-gradient-from: #000 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
@@ -1961,7 +2052,18 @@ code {
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
 
+@media not all and (min-width: 640px) {
+  .max-sm\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 640px) {
+  .sm\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1969,6 +2071,16 @@ code {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .md\:mx-24 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1991,6 +2103,16 @@ code {
 }
 
 @media (min-width: 1024px) {
+  .lg\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -2030,10 +2152,6 @@ code {
     padding-right: 2rem;
   }
 
-  .lg\:pl-0 {
-    padding-left: 0px;
-  }
-
   .lg\:pl-2 {
     padding-left: 0.5rem;
   }
@@ -2044,6 +2162,11 @@ code {
 }
 
 @media (min-width: 1280px) {
+  .xl\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
