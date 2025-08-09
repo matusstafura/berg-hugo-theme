@@ -5,7 +5,7 @@
     <body class="bg-[linear-gradient(135deg,_#ffffff_35.71%,_#f5f5f5_35.71%,_#f5f5f5_50%,_#ffffff_50%,_#ffffff_85.71%,_#f5f5f5_85.71%,_#f5f5f5_100%)] bg-[length:9.9px_9.9px]">
         {{- partial "body/first.html" . -}}
         <div class="bg-auto h-full min-h-screen bg-gradient-to-b dark:from-black dark:to-gray-800">
-            <div class="mx-0 md:mx-32 bg-white dark:bg-black border-x p-4">
+            <div class="bg-white dark:bg-black border-x p-4 max-w-5xl mx-auto">
                 {{- $header := .Site.Params.Header | default "header" }}
                 {{- partial (printf "headers/%s.html" $header) . -}}
                 <div class="mx-auto xl:p-0 max-w-5xl">

@@ -6,7 +6,7 @@
     <ul class="p-0">
         {{ $date_format := .Site.Params.Date_Format }}
         {{ range .Paginator.Pages }}
-        <li class="flex">
+        <li class="md:flex list-none mb-4">
           <div class="w-64">{{ .Date.Format $date_format }}</div>
           <div><a href="{{ .Permalink }}">{{ .Title }}</a></div>
         </li>
