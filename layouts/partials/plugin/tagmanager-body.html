@@ -1,7 +1,8 @@
-{{ if .Site.Params.plugins.tagmanager }}
+{{ $gtmID := getenv "HUGO_GTM_ID" | default .Site.Params.plugins.tagmanager }}
+{{ if $gtmID }}
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.plugins.tagmanager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmID }}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 {{ end }}

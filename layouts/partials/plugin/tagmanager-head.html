@@ -1,9 +1,10 @@
-{{- if .Site.Params.plugins.tagmanager -}}
+{{- $gtmID := getenv "HUGO_GTM_ID" | default .Site.Params.plugins.tagmanager -}}
+{{- if $gtmID -}}
 <!-- Google Tag Manager -->
 <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','{{ .Site.Params.plugins.tagmanager }}');</script>
+})(window,document,'script','dataLayer','{{ $gtmID }}');</script>
 <!-- End Google Tag Manager -->
 {{- end -}}
