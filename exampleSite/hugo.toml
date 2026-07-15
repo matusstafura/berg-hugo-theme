@@ -1,5 +1,5 @@
 baseURL = 'https://example.org'
-languageCode = 'en-us'
+locale = 'en-US'
 title = "Berg Docs"
 theme = 'berg'
 themesDir = '../..'
