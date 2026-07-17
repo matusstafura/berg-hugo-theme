@@ -8,17 +8,17 @@
     {{ $jpg := ($banner.Fill "480x270 q90 jpg") }}
     {{ $webp := ($banner.Fill "480x270 q90 webp") }}
 
-    <div>
+    <div class="w-1/2">
       <picture>
         <source type="image/webp" srcset="{{ $webp.RelPermalink }}" alt="{{ .Title }}" />
         <source type="image/jpeg" srcset="{{ $jpg.RelPermalink }} 480w" alt="{{ .Title }}" />
         <img src="{{ $jpg.RelPermalink }}" loading="lazy" decoding="async" alt="{{ .Title }}" width="480" height="270" class="m-0">
       </picture>
     </div>
-    <div>
+    <div class="w-1/2 p-4">
       <h3>{{ .title }}</h3>
-      <div class="text-slate-500 dark:text-gray-100 p-4">{{ .description }}</div>
-      <div class="pb-8">
+      <div class="text-slate-500 dark:text-gray-100">{{ .description }}</div>
+      <div class="py-8">
         {{ if .link }}<a href="{{ .link }}" class="px-6 no-underline py-3 bg-primary-50 rounded shadow-md text-primary-50 hover:text-primary-600 hover:bg-primary-50">
           {{ .button | default "Read more ..."}}</a>{{ end }}
         </div>
