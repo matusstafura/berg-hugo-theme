@@ -7,7 +7,7 @@
     "@id": "{{ .Permalink }}"
   },
   "headline": "{{ .Title }}",
-  "image": "{{ .Params.featuredImage | absURL }}", 
+  "image": "{{ with .Params.images }}{{ index . 0 | absURL }}{{ else }}{{ with .Params.featuredImage }}{{ . | absURL }}{{ else }}{{ .Site.Params.logo | absURL }}{{ end }}{{ end }}",
   "author": {
     "@type": "Person",
     "name": "{{ .Site.Params.author }}"
@@ -17,7 +17,7 @@
     "name": "{{ .Site.Title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ .Site.Params.logo }}"
+      "url": "{{ .Site.Params.logo | absURL }}"
     }
   },
   "datePublished": "{{ .Date.Format "2006-01-02" }}",
